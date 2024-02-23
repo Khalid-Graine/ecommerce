@@ -29,23 +29,23 @@ const SearchBar = ({ devices }) => {
       ref={dropMenuRef}
       className={`${
         devices == "sm" ? "flex  md:hidden" : "hidden md:flex"
-      } w-full  sides items-center h-9 bg-blue-800 relative z-[1]`}
+      } sides  relative z-[-0] h-9  w-full items-center`}
     >
       <input
         onChange={(e) => handleQuery(e.target.value)}
         type="search"
         name=""
         id=""
-        className="w-full h-full px-3 placeholder:text-gray-500 text-gray-950 outline-none rounded-s-sm"
+        className="h-full w-full rounded-s-sm px-3 text-gray-950 outline-none placeholder:text-gray-500"
         placeholder="Start typign here ..."
       />
-      <button className="bg-red-600 w-12 h-full rounded-e-sm">
+      <button className="h-full w-12 rounded-e-sm bg-red-600">
         <i className="fa-solid fa-magnifying-glass"></i>
       </button>
       {/* suggestions */}
       {showDropdown && (
-        <div className="sides w-full  absolute left-0 top-full z-10 pt-1">
-          <div className="bg-white border border-black w-full h-full text-black overflow-hidden overflow-y-auto max-h-[350px] rounded-sm p-1  ">
+        <div className="sides absolute  left-0 top-full z-10 w-full pt-1">
+          <div className="h-full max-h-[350px] w-full overflow-hidden overflow-y-auto rounded-sm border border-black bg-white p-1 text-black  ">
             <p> {searchQuery}</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat

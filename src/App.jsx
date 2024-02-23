@@ -10,8 +10,8 @@ function App() {
         <TheHeader />
         <Breadcrumb />
         <main className="bg-red-300 p-2">
-          <Outlet /> 
-        </main>git
+          <Outlet />
+        </main>
         <div className="h-[1500px] bg-gray-400"></div>
         <TheFooter />
       </>

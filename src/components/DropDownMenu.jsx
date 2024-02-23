@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import CurrencyIcon from "./CurrencyIcon";
+import { KeyboardArrowDown } from "../assets/icons/MyIcons";
 
 const DropDownMenu = ({
   availableCurrencies,
@@ -29,9 +30,11 @@ const DropDownMenu = ({
         <div
           onMouseEnter={() => setShow(true)}
           onMouseLeave={() => setShow(false)}
-          className="relative transition delay-75 duration-400 ease-in-out rounded-xl"
+          className="duration-400 relative rounded-xl transition delay-75 ease-in-out"
         >
-          <div className={`${side} absolute z-50  top-[0px] mr-4 pt-2 min-w-28 `}>
+          <div
+            className={`${side} absolute top-[0px]  z-50 mr-4 min-w-28 pt-2 `}
+          >
             <DropdownMenuContent {...{ availableCurrencies, handleClick }} />
           </div>
         </div>
@@ -41,12 +44,12 @@ const DropDownMenu = ({
 };
 const DropdownMenuContent = ({ availableCurrencies, handleClick }) => {
   return (
-    <ul className="bg-white text-gray-600 border-[.5px] border-gray-75 shadow-sm   cursor-pointer flex flex-col rounded-sm">
+    <ul className="border-gray-75 flex cursor-pointer flex-col rounded-sm   border-[.5px] bg-white text-gray-600 shadow-sm">
       {availableCurrencies.map((item, index) => (
         <li
           key={index}
           onClick={() => handleClick(item)}
-          className="py-1 pl-3   border-transparent  hover:text-black rounded-sm flex gap-1"
+          className="flex gap-1   rounded-sm  border-transparent py-1 pl-3 hover:text-black"
         >
           <CurrencyIcon currency={item} />
           <p className="capitalize"> {item}</p>
@@ -58,11 +61,10 @@ const DropdownMenuContent = ({ availableCurrencies, handleClick }) => {
 const CurrencyButton = ({ currency }) => {
   return (
     <button
-      className={"px-2 py-1 rounded-sm flex items-center justify-center gap-2 "}
+      className={"flex items-center justify-center gap-0 rounded-sm px-2 py-1 "}
     >
       <p className="capitalize">{currency}</p>
-
-      <i className="fa-solid fa-sort-down -mt-1"></i>
+      <KeyboardArrowDown />
     </button>
   );
 };

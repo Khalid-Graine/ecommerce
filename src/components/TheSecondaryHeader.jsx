@@ -6,8 +6,8 @@ const TheSecondaryHeader = () => {
   const scrollPosition = useScrollPosition();
   return (
     <div
-      className={`hidden bg-blue-800 w-full md:flex justify-between    ${
-        scrollPosition > 190 ? "fixed  top-0 right-0 " : "relative"
+      className={`bg-1 hidden  w-full justify-between md:flex    ${
+        scrollPosition > 190 ? "fixed  right-0 top-0 " : "relative"
       }`}
     >
       <ThePart1 />
@@ -19,7 +19,7 @@ const TheSecondaryHeader = () => {
 const ThePart1 = () => {
   return (
     <div className="flex items-center gap-6 ">
-      <div className=" bg-green-500 h-full  rounded-r-sm rounded-b-none flex justify-center items-center sides">
+      <div className=" sides flex  h-full items-center justify-center rounded-b-none rounded-r-sm bg-green-500">
         <p>All departemesnt</p>
       </div>
       <div className="flex items-center gap-2 text-gray-200">
@@ -32,7 +32,7 @@ const ThePart1 = () => {
 };
 const ThePart2 = () => {
   return (
-    <div className="flex gap-6 items-center text-gray-200">
+    <div className="flex items-center gap-6 text-gray-200">
       <div className="flex items-center gap-2">
         <AccountInfo />
         <TheWIshLIst />
@@ -48,12 +48,12 @@ const ShopingCartItems = () => {
       to={"checkout"}
       onMouseEnter={() => setShowDropDown(true)}
       onMouseLeave={() => setShowDropDown(false)}
-      className="flex gap-1 items-center bg-green-500 h-full rounded-l-sm rounded-b-none text-white sides relative"
+      className="sides relative flex h-full items-center gap-1 rounded-b-none rounded-l-sm bg-green-500 text-white"
     >
       <p>0 items(s) - $0.00</p>
       <i className="fa-solid fa-cart-shopping"></i>
       {showDropDown && (
-        <div className="w-[300px] absolute  top-full right-0 bg-white shadow-md  text-black p-1">
+        <div className="absolute right-0  top-full w-[300px] bg-white p-1  text-black shadow-md">
           <ul>
             <li>test</li>
             <li>test</li>
@@ -71,12 +71,12 @@ const AccountInfo = () => {
       to={"account"}
       onMouseEnter={() => setShowDropDown(true)}
       onMouseLeave={() => setShowDropDown(false)}
-      className="flex flex-col items-center relative"
+      className="relative flex flex-col items-center"
     >
       <i className="fa-regular fa-circle-user text-[23px]"></i>
-      <p className="text-xs text-">Account</p>
+      <p className="text- text-xs">Account</p>
       {showDropDown && (
-        <div className=" absolute bg-white w-20 -left-[50%] top-full rounded-sm">
+        <div className=" absolute -left-[50%] top-full w-20 rounded-sm bg-white">
           <ul id="content" className="p-1 text-gray-500 ">
             <li>test</li>
             <li>test</li>
@@ -90,10 +90,10 @@ const AccountInfo = () => {
 
 const TheWIshLIst = () => {
   return (
-    <Link to={"wishlist"} className="flex flex-col items-center relative">
+    <Link to={"wishlist"} className="relative flex flex-col items-center">
       <i className="fa-solid fa-heart text-[24px]"></i>
       <p className="text-xs">wishlist</p>
-      <div className=" absolute bg-red-600 text-white size-4 rounded-full flex justify-center items-center text-xs top-1 right-1 font-semibold">
+      <div className=" absolute right-1 top-1 flex size-4 items-center justify-center rounded-full bg-red-600 text-xs font-semibold text-white">
         4
       </div>
     </Link>

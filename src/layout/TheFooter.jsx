@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TheFooter = () => {
-  return (
-    <div className='bg-gray-800 h-28 sides'>TheFooter</div>
-  )
-}
+  return <div className="sides h-28 bg-gray-800">TheFooter</div>;
+};
 
-export default TheFooter
+export default TheFooter;

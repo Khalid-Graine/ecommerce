@@ -14,12 +14,11 @@ const currencySlice = createSlice({
   initialState,
   reducers: {
     setSelectedCurrency: (state, action) => {
-      state.selectedCurrency = action.payload
+      state.selectedCurrency = action.payload;
     },
-   
   },
 });
 
-export const {  setSelectedCurrency} = currencySlice.actions;
+export const { setSelectedCurrency } = currencySlice.actions;
 
 export default currencySlice.reducer;

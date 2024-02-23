@@ -4,55 +4,54 @@ import App from "./App.jsx";
 import "../src/assets/css/index.css";
 import "../app/globals.css";
 import CurrencyProvider from "./hooks/CurrencyProvider.jsx";
-import { RouterProvider, createBrowserRouter} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
-import Home from './Pages/Home';
-import ErrorPage from './Pages/ErrorPage';
-import Blogs from './Pages/Blogs';
-import Faq from './Pages/Faq';
-import Contact from './Pages/Contact';
-import WishList from './Pages/WishList';
-import Account from './Pages/Account';
-import ShoppingCart from './Pages/ShoppingCart';
+import Home from "./Pages/Home";
+import ErrorPage from "./Pages/ErrorPage";
+import Blogs from "./Pages/Blogs";
+import Faq from "./Pages/Faq";
+import Contact from "./Pages/Contact";
+import WishList from "./Pages/WishList";
+import Account from "./Pages/Account";
+import ShoppingCart from "./Pages/ShoppingCart";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
-        element: <Home />
+        path: "/",
+        element: <Home />,
       },
       {
-        path: '/blogs',
-        element: <Blogs />
-      }
-      ,
-      {
-        path: '/faq',
-        element: <Faq />
+        path: "/blogs",
+        element: <Blogs />,
       },
       {
-        path: '/contact',
-        element: <Contact />
+        path: "/faq",
+        element: <Faq />,
       },
       {
-        path: '/wishlist',
-        element: <WishList />
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path: '/account',
-        element: <Account />
+        path: "/wishlist",
+        element: <WishList />,
       },
       {
-        path: '/checkout',
-        element: <ShoppingCart />
-      }
-    ]
-  }
+        path: "/account",
+        element: <Account />,
+      },
+      {
+        path: "/checkout",
+        element: <ShoppingCart />,
+      },
+    ],
+  },
 ]);
 
 // const router = createBrowserRouter([
@@ -94,11 +93,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-    <RouterProvider router={router}>
-      <CurrencyProvider>
-        <App />
-      </CurrencyProvider>
-    </RouterProvider>
+      <RouterProvider router={router}>
+        <CurrencyProvider>
+          <App />
+        </CurrencyProvider>
+      </RouterProvider>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

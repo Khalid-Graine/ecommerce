@@ -1,33 +1,64 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
+import { Close, Menu, ShoppingCartIcon } from "../assets/icons/MyIcons";
 
 const TheMainHeader = () => {
-  const [showMenu , setShowMenu] = useState(false)
-   return (
-    <div>
-      <header className="flex  py-1 justify-between gap-12 sides">
-      <HeaderPart1 {...{setShowMenu}} />
-      <HeaderPart2 />
-      <HeaderPart3  />
-    </header>
-      <div className={`bg-yellow-400 px-10 w-full h-screen py-3 fixed top-0 transition-all delay-75 duration-300 ease-linear z-[2] ${ showMenu ? 'left-0' : '-left-full'}`}>
-     
-     <button onClick={ () => setShowMenu(false)}>hide</button>
-    
+  const [showMenu, setShowMenu] = useState(false);
+  const [ShowShoppingCart, setShowShoppingCart] = useState(false);
+
+  return (
+    <>
+      <header className="sides   flex justify-between gap-12 py-1">
+        <HeaderPart1 {...{ setShowMenu }} />
+        <HeaderPart2 />
+        <HeaderPart3 {...{ setShowShoppingCart }} />
+      </header>
+      <div
+        className={`fixed  top-0 z-[4]  h-screen w-10/12 bg-yellow-400 transition-all delay-75 duration-300 ease-linear ${
+          showMenu ? "left-0" : "-left-full"
+        }`}
+      >
+        <div className="h-screen w-full bg-white ">
+          <div className="sides flex items-center justify-between bg-red-300 py-2">
+            <p>Menu</p>
+
+            <div onClick={() => setShowMenu(false)} className="icon-container">
+              <Close />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    
+
+      <BlackLayer showMenu={showMenu} />
+    </>
   );
 };
 
-const HeaderPart1 = ({setShowMenu}) => {
-
+const BlackLayer = ({ showMenu }) => {
   return (
-    <div className="flex items-center">
-      <i onClick={() => setShowMenu(true)} className="fa-solid fa-bars md:hidden"></i>
-      <div className="hidden md:block">
-      <Logo />
+    showMenu && (
+      <div
+        className={`z-[2] duration-800 fixed right-0 top-0 bg-black opacity-50 transition-all delay-300 ease-linear ${
+          showMenu ? "h-full w-full" : "h-0 w-0"
+        }`}
+      ></div>
+    )
+  );
+};
+
+const HeaderPart1 = ({ setShowMenu }) => {
+  return (
+    <div className="flex items-center ">
+      <div
+        className="icon-container md:hidden"
+        onClick={() => setShowMenu(true)}
+      >
+        <Menu />
+      </div>
+
+      <div className="hidden h-full items-center  justify-center md:flex">
+        <Logo />
       </div>
     </div>
   );
@@ -35,7 +66,7 @@ const HeaderPart1 = ({setShowMenu}) => {
 
 const HeaderPart2 = () => {
   return (
-    <div className="flex-grow flex justify-center ">
+    <div className="flex flex-grow justify-center ">
       <div className="md:hidden">
         <Logo />
       </div>
@@ -44,10 +75,15 @@ const HeaderPart2 = () => {
   );
 };
 
-const HeaderPart3 = () => {
+const HeaderPart3 = ({ setShowShoppingCart }) => {
   return (
     <div className="flex items-center">
-      <i  className="fa-solid fa-cart-shopping md:hidden"></i>
+      <div
+        onClick={() => setShowShoppingCart(true)}
+        className="icon-container md:hidden"
+      >
+        <ShoppingCartIcon />
+      </div>
       <NavLinks />
     </div>
   );
@@ -55,7 +91,7 @@ const HeaderPart3 = () => {
 
 const NavLinks = () => {
   return (
-    <nav className="hidden h-full md:flex gap-2 items-center capitalize">
+    <nav className="hidden  h-full gap-2 capitalize   md:flex">
       <NavLink icon="fa-regular fa-circle-question" text="faq" />
       <NavLink icon="fa-brands fa-blogger" text="blogs" />
       <NavLink icon="fa-solid fa-id-card" text="contact" />
@@ -66,25 +102,20 @@ const NavLinks = () => {
 const NavLink = ({ icon, text }) => {
   return (
     <Link to={`/${text}`}>
-    <div className="bg-white text-black flex items-center gap-1 h-full rounded-sm px-2">
-      <i className={icon}></i>
-      <p className="uppercase">{text}</p>   
-    </div>
+      <div className="flex h-full items-center gap-1 rounded-sm bg-white px-2 text-black">
+        <i className={icon}></i>
+        <p className="uppercase">{text}</p>
+      </div>
     </Link>
   );
 };
 
 const Logo = () => {
   return (
-    <div className="font-bold text-xl bg-blue-300 rounded-sm px-4 h-full ">Journal</div>
-  )
-}
-
-const SmallDevicesMenu =  () => {
-  return (
-    <div className="bg-yellow-300">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga saepe quis eum doloribus sunt odio, officiis labore vitae reprehenderit?
+    <div className="flex h-full items-center bg-blue-600 px-4 font-bold text-white">
+      Journal
     </div>
-  )
-}
+  );
+};
+
 export default TheMainHeader;

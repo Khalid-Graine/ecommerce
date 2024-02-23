@@ -8,7 +8,6 @@
     "css": "app/globals.css",
     "baseColor": "slate",
     "cssVariables": true
-    
   },
   "aliases": {
     "components": "@/components",
