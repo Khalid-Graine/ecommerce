@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import DropDownMenu from "./DropDownMenu";
 import SocialMedia from "./SocialMedia";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectedCurrency } from "../store/reducers/currencyReducer";
+import { setSelectedCurrency } from "../../../store/reducers/currencyReducer";
 
 const Secondbanner = () => {
   const { availableCurrencies, selectedCurrency } = useSelector(

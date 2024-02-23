@@ -1,9 +1,9 @@
 import React from "react";
-import OfferBanner from "../components/OfferBanner";
-import Secondbanner from "../components/Secondbanner";
-import TheMainHeader from "../components/TheMainHeader";
-import SearchBar from "../components/SearchBar";
-import TheSecondaryHeader from "../components/TheSecondaryHeader";
+import OfferBanner from "../components/parts/header/OfferBanner";
+import Secondbanner from "../components/parts/header/Secondbanner";
+import TheMainHeader from "../components/parts/header/TheMainHeader";
+import SearchBar from "../components/parts/header/SearchBar";
+import TheSecondaryHeader from "../components/parts/header/TheSecondaryHeader";
 
 const TheHeader = () => {
   return (

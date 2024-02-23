@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import CurrencyIcon from "./CurrencyIcon";
-import { KeyboardArrowDown } from "../assets/icons/MyIcons";
+import { KeyboardArrowDown } from "../../../assets/icons/MyIcons";
 
 const DropDownMenu = ({
   availableCurrencies,

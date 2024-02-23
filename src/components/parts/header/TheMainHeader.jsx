@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
-import { Close, Menu, ShoppingCartIcon } from "../assets/icons/MyIcons";
+import { Close, Menu, ShoppingCartIcon } from "../../../assets/icons/MyIcons";
 
 const TheMainHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -39,7 +39,7 @@ const BlackLayer = ({ showMenu }) => {
   return (
     showMenu && (
       <div
-        className={`z-[2] duration-800 fixed right-0 top-0 bg-black opacity-50 transition-all delay-300 ease-linear ${
+        className={`duration-800 fixed right-0 top-0 z-[2] bg-black opacity-50 transition-all delay-300 ease-linear ${
           showMenu ? "h-full w-full" : "h-0 w-0"
         }`}
       ></div>

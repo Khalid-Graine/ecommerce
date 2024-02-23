@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useScrollPosition from "../hooks/seScrollPosition";
+import useScrollPosition from "../../../hooks/seScrollPosition";
 import { Link } from "react-router-dom";
 
 const TheSecondaryHeader = () => {

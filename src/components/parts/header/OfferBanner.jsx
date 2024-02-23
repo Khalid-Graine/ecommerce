@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Close } from "../assets/icons/MyIcons";
+import { Close } from "../../../assets/icons/MyIcons";
 
 const OfferBanner = () => {
   const [showOfferBanner, setShowOfferBanner] = useState(true);
