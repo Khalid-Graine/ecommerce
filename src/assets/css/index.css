@@ -88,7 +88,8 @@
 .icon {
   width: 24px;
   cursor: pointer;
-  color: whitesmoke;
+  color: red;
+  /* color: whitesmoke; */
 }
 
 .icon-container {
