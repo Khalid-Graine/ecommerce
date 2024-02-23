@@ -94,3 +94,6 @@
 .icon-container {
   @apply cursor-pointer rounded-full bg-[#d4d4d4] bg-opacity-0 p-1 text-[#757575] text-red-500  transition duration-200 ease-linear hover:bg-opacity-50 hover:text-[#000000c5];
 }
+.title {
+  @apply p-0 font-medium text-lg
+}
