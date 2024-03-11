@@ -12,7 +12,7 @@ const Home = () => {
         <CenterArea />
         {/* right */}
         <RightSideBar />
-      </div>    
+      </div>
     </>
   );
 };

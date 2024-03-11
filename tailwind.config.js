@@ -1,10 +1,10 @@
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`
+      return `rgba(var(${variableName}), ${opacityValue})`;
     }
-    return `rgb(var(${variableName}))`
-  }
+    return `rgb(var(${variableName}))`;
+  };
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -16,12 +16,10 @@ module.exports = {
     "./src/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
   ],
-  theme: { 
+  theme: {
     extend: {
       colors: {
-        khalid: withOpacity('--khalid')
-      ,
-        
+        khalid: withOpacity("--khalid"),
         primary: "rgba(var(--primary))",
         border: "var(--border)",
         base: {
@@ -32,7 +30,7 @@ module.exports = {
         accent: {
           DEFAULT: "var(--accent)",
           1: "var(--accent)",
-          2: 'var(--accent2)',
+          2: "var(--accent2)",
         },
       },
 
@@ -46,8 +44,7 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-      }
+      },
     },
   },
- 
 };

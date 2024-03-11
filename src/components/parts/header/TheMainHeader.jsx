@@ -11,26 +11,42 @@ const TheMainHeader = () => {
   return (
     <>
       <header className="sides flex justify-between gap-12 py-1">
-        <HeaderPart1 setShowBlackLayer={setShowBlackLayer} setShowMenu={setShowMenu} />
+        <HeaderPart1
+          setShowBlackLayer={setShowBlackLayer}
+          setShowMenu={setShowMenu}
+        />
         <HeaderPart2 />
-        <HeaderPart3 setShowShoppingCart={setShowShoppingCart} setShowBlackLayer={setShowBlackLayer} />
+        <HeaderPart3
+          setShowShoppingCart={setShowShoppingCart}
+          setShowBlackLayer={setShowBlackLayer}
+        />
       </header>
-      <SidePanel show={showMenu} setShow={setShowMenu} setShowBlackLayer={setShowBlackLayer} panelName={'menu'} />
-      <SidePanel show={showShoppingCart} setShow={setShowShoppingCart} setShowBlackLayer={setShowBlackLayer} panelName={'shopping cart'} />
+      <SidePanel
+        show={showMenu}
+        setShow={setShowMenu}
+        setShowBlackLayer={setShowBlackLayer}
+        panelName={"menu"}
+      />
+      <SidePanel
+        show={showShoppingCart}
+        setShow={setShowShoppingCart}
+        setShowBlackLayer={setShowBlackLayer}
+        panelName={"shopping cart"}
+      />
       <BlackLayer show={showBlackLayer} />
     </>
   );
 };
 
-const SidePanel = ({ show, setShow, setShowBlackLayer,panelName }) => {
-  const sidePosition = panelName == 'menu'? 'left' : 'right'
+const SidePanel = ({ show, setShow, setShowBlackLayer, panelName }) => {
+  const sidePosition = panelName == "menu" ? "left" : "right";
   return (
-    <div className={`fixed top-0 z-[4] h-screen w-10/12 bg-yellow-400 transition-all delay-75 duration-300 ease-linear ${show  ? `${sidePosition}-0` : `-${sidePosition}-full`}`}>
+    <div
+      className={`fixed top-0 z-[4] h-screen w-10/12 bg-yellow-400 transition-all delay-75 duration-300 ease-linear ${show ? `${sidePosition}-0` : `-${sidePosition}-full`}`}
+    >
       <div className="h-screen w-full bg-white">
         <div className="sides flex items-center justify-between bg-red-300 py-2">
-          <p className=" uppercase">
-            {panelName}
-          </p>
+          <p className=" uppercase">{panelName}</p>
           <div
             onClick={() => {
               setShow(false);
@@ -47,7 +63,11 @@ const SidePanel = ({ show, setShow, setShowBlackLayer,panelName }) => {
 };
 
 const BlackLayer = ({ show }) => {
-  return show && <div className="duration-800 fixed right-0 top-0 z-[2] bg-black opacity-50 transition-all delay-300 ease-linear h-full w-full"></div>;
+  return (
+    show && (
+      <div className="duration-800 fixed right-0 top-0 z-[2] h-full w-full bg-black opacity-50 transition-all delay-300 ease-linear"></div>
+    )
+  );
 };
 
 const HeaderPart1 = ({ setShowBlackLayer, setShowMenu }) => {

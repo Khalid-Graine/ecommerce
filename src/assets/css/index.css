@@ -90,8 +90,8 @@
   @apply cursor-pointer rounded-full bg-[#d4d4d4] bg-opacity-0 p-1 text-[#757575] text-red-500  transition duration-200 ease-linear hover:bg-opacity-50 hover:text-[#000000c5];
 }
 .title {
-  @apply   font-semibold text-lg
+  @apply text-lg font-semibold;
 }
 .line {
-  @apply  w-full h-1 bg-red-500 my-4
+  @apply my-4 h-1 w-full bg-red-500;
 }
