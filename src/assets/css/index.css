@@ -9,7 +9,7 @@
   font-size: 48px; */
 }
 .sides {
-  @apply px-6;
+  @apply px-3 md:px-6;
 }
 .fixed-header {
   transition: all 0.3s ease; /* Adjust duration and easing function as needed */
