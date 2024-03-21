@@ -18,6 +18,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'md': '960px',
+      },
       colors: {
         khalid: withOpacity("--khalid"),
         primary: "rgba(var(--primary))",
