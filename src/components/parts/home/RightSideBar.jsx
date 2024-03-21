@@ -2,7 +2,7 @@ import React from "react";
 
 const RightSideBar = () => {
   return (
-    <div className="flex w-[260px] flex-col bg-yellow-300 px-4 py-2 ">
+    <div className="hidden lm:flex w-[260px] flex-col bg-yellow-300 px-4 py-2 ">
       <div>
         <h4 className="title">top categories</h4>
 

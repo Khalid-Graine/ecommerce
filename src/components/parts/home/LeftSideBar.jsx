@@ -2,7 +2,7 @@ import React from "react";
 
 const LeftSideBar = () => {
   return (
-    <div className="flex  w-[260px] flex-col bg-yellow-300 px-4 py-2">
+    <div className="hidden  w-[260px] flex-col bg-yellow-300 px-4 py-2 lm:flex">
       <div>
         <p className="title">title</p>
         <ul>
@@ -13,6 +13,10 @@ const LeftSideBar = () => {
         </ul>
       </div>
       <div className="line"></div>
+      <div>
+        <p className="title">WHAT PEOPLE SAY:</p>
+        
+      </div>
     </div>
   );
 };

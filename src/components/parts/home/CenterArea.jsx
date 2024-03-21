@@ -9,6 +9,31 @@ const CenterArea = () => {
         <div className="col-span-3 h-[100px] w-full bg-blue-400"></div>
         <div></div>
       </div>
+      <div className="bg-red-700 grid grid-cols-1 lg:grid-cols-12 gap-1">
+        <div className=" bg-yellow-800 col-span-4 flex">
+          <div className="px-4 flex justify-center items-center">icon</div>
+          <div>
+            <h3 className=" font-bold">Lorem ipsum dolor sit.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas et deserunt impedit aliquam culpa fuga corrupti autem saepe a?</p>
+          </div>
+        </div>
+        <div className=" bg-yellow-800 col-span-4 flex">
+          <div className="px-4 flex justify-center items-center">icon</div>
+          <div>
+            <h3 className=" font-bold">Lorem ipsum dolor sit.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas et deserunt impedit aliquam culpa fuga corrupti autem saepe a?</p>
+          </div>
+        </div>
+        <div className=" bg-yellow-800 col-span-4 flex">
+          <div className="px-4 flex justify-center items-center">icon</div>
+          <div>
+            <h3 className=" font-bold">Lorem ipsum dolor sit.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas et deserunt impedit aliquam culpa fuga corrupti autem saepe a?</p>
+          </div>
+        </div>
+        
+        
+      </div>
     </div>
   );
 };

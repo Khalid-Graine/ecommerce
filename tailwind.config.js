@@ -19,7 +19,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'md': '960px',
+        'lm': '770px',
       },
       colors: {
         khalid: withOpacity("--khalid"),
