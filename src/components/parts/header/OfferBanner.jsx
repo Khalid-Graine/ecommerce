@@ -10,8 +10,8 @@ const OfferBanner = () => {
 
   return (
     <div
-      className={`sides  flex w-full  items-center justify-between overflow-hidden bg-blue-500 transition-all delay-100 duration-500 ease-linear   ${
-        showOfferBanner == true ? "h-10 bg-opacity-100" : "h-0 bg-opacity-0"
+      className={`sides   flex w-full  items-center justify-between overflow-hidden bg-blue-500 transition-all delay-100 duration-500 ease-linear   ${
+        showOfferBanner == true ? " bg-opacity-100" : "h-0 bg-opacity-0"
       }`}
     >
       <span></span>
@@ -23,8 +23,8 @@ const OfferBanner = () => {
         Get 20% off on all our products this Friday!
       </p>
 
-      <div onClick={handleHideBanner} className="icon-container">
-        <Close />
+      <div onClick={handleHideBanner} >
+      <i className="fa-solid fa-xmark text-xl text-white cursor-pointer hover:text-gray-300"></i>
       </div>
     </div>
   );

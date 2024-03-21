@@ -20,7 +20,7 @@ const DropDownMenu = ({
       <div
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
-        className="flex items-center"
+        className="flex items-center "
       >
         <CurrencyIcon currency={selectedCurrency} />
         <CurrencyButton currency={selectedCurrency} />
@@ -61,10 +61,11 @@ const DropdownMenuContent = ({ availableCurrencies, handleClick }) => {
 const CurrencyButton = ({ currency }) => {
   return (
     <button
-      className={"flex items-center justify-center gap-0 rounded-sm px-2 py-1 "}
+      className={"flex items-center justify-center gap-0 rounded-sm pl-2 py-1  "}
     >
       <p className="capitalize">{currency}</p>
-      <KeyboardArrowDown />
+      
+      <i className="fa-solid fa-chevron-down ml-1 text-xs"></i>
     </button>
   );
 };

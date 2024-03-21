@@ -15,7 +15,7 @@ const Secondbanner = () => {
   };
 
   return (
-    <div className="accent sides flex justify-between text-white">
+    <div className="accent sides flex justify-between text-white ">
       <SocialMedia />
       <LoginRegisterButtons />
       <FreeShipping />
