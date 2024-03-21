@@ -8,7 +8,6 @@ const TheMainHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showShoppingCart, setShowShoppingCart] = useState(false);
   const [showBlackLayer, setShowBlackLayer] = useState(false);
-  
 
   return (
     <>
@@ -44,14 +43,13 @@ const TheMainHeader = () => {
             <ShoppingCartIcon />
           </div>
           <nav className="hidden h-full gap-2 capitalize md:flex">
-      <NavLink icon="fa-regular fa-circle-question" text="faq" />
-      <NavLink icon="fa-brands fa-blogger" text="blogs" />
-      <NavLink icon="fa-solid fa-id-card" text="contact" />
-    </nav>
+            <NavLink icon="fa-regular fa-circle-question" text="faq" />
+            <NavLink icon="fa-brands fa-blogger" text="blogs" />
+            <NavLink icon="fa-solid fa-id-card" text="contact" />
+          </nav>
         </div>
       </header>
 
-      
       <div
         className={`fixed top-0 z-[4] h-screen w-10/12 bg-yellow-400 transition-all delay-75 duration-300 ease-linear 
 
@@ -75,7 +73,6 @@ const TheMainHeader = () => {
         </div>
       </div>
 
-      
       <div
         className={`fixed top-0 z-[4] h-screen w-10/12 bg-yellow-400 transition-all delay-75 duration-300 ease-linear 
 
@@ -103,18 +100,6 @@ const TheMainHeader = () => {
     </>
   );
 };
-
-
-// const NavLink = ({ icon, text }) => {
-//   return (
-//     <Link to={`/${text}`}>
-//       <div className="flex h-full items-center gap-1 rounded-sm bg-white px-2 text-black">
-//         <i className={icon}></i>
-//         <p className="uppercase">{text}</p>
-//       </div>
-//     </Link>
-//   );
-// };
 
 const Logo = () => {
   return (

@@ -6,7 +6,7 @@ const TheSecondaryHeader = () => {
   const scrollPosition = useScrollPosition();
   return (
     <div
-      className={`bg-1 hidden  w-full justify-between md:flex    ${
+      className={`bg-1 hidden  w-full justify-between md:flex z-[-6]   ${
         scrollPosition > 190 ? "fixed  right-0 top-0 " : "relative"
       }`}
     >
