@@ -6,18 +6,15 @@ import NotificationModule from "./components/NotificationModule";
 import ExclusiveClubPromo from "./components/parts/ExclusiveClubPromo";
 
 function App() {
- 
   return (
     <>
       <div>
         <TheHeader />
         <Breadcrumb />
         <Outlet />
-       <ExclusiveClubPromo />
-        
+        <ExclusiveClubPromo />
         <TheFooter />
         <NotificationModule />
-       
       </div>
     </>
   );
