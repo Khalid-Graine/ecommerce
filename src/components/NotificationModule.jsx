@@ -9,8 +9,8 @@ const NotificationModule = () => {
   return (
   
          <div
-          className={`Notification-Module fixed w-full bg-black text-white bg-opacity-80 px-4 py-3 transition-all ease-in-out  duration-1000
-          ${showNotification ? "bottom-0" : "-bottom-full"}`}
+          className={`${showNotification ? "bottom-0" : "-bottom-full"} fixed w-full bg-black text-white bg-opacity-80 px-4 py-3 transition-all ease-in-out  duration-1000
+          `}
         >
            <div className="flex justify-between">
            <h3 className=" font-bold text-lg">Notification Module</h3>

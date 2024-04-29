@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Close } from "../../../assets/icons/MyIcons";
 
 const OfferBanner = () => {
   const [showOfferBanner, setShowOfferBanner] = useState(true);
@@ -10,21 +9,19 @@ const OfferBanner = () => {
 
   return (
     <div
-      className={`sides   flex w-full  items-center justify-between overflow-hidden bg-blue-500 transition-all delay-100 duration-500 ease-linear   ${
-        showOfferBanner == true ? " bg-opacity-100" : "h-0 bg-opacity-0"
-      }`}
+      className={`sides    overflow-hidden bg-[#c4cafd] transition-all  delay-75  duration-500 ease-in-out ${showOfferBanner ? "h-8" : "h-0 "}`}
     >
-      <span></span>
-      <p
-        className={`transition-all delay-0 duration-150 ease-linear  ${
-          showOfferBanner ? " opacity-100" : " opacity-0"
-        }`}
-      >
-        Get 20% off on all our products this Friday!
-      </p>
-
-      <div onClick={handleHideBanner} >
-      <i className="fa-solid fa-xmark text-xl text-white cursor-pointer hover:text-gray-300"></i>
+      <div className=" h-full flex justify-center items-center">
+        
+        <div>
+        <span className="font-bold"> 20% OFF</span> on all products{" "}
+        <a href="http://" className="text-blue-600">
+          Shop now
+        </a>
+        </div>
+        <div onClick={handleHideBanner}>
+          <i className="fa-solid fa-xmark ml-4 text-lg text-red-500 cursor-pointer"></i>
+        </div>
       </div>
     </div>
   );
