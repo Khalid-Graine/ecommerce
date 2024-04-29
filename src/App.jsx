@@ -9,9 +9,7 @@ function App() {
       <>
         <TheHeader />
         <Breadcrumb />
-
         <Outlet />
-
         <TheFooter />
       </>
     </>

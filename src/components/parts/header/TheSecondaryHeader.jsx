@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useScrollPosition from "../../../hooks/seScrollPosition";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const TheSecondaryHeader = () => {
   const scrollPosition = useScrollPosition();
   return (
     <div
-      className={`bg-1 hidden  w-full justify-between md:flex z-[-6]   ${
+      className={`bg-1 z-[-6]  hidden w-full justify-between md:flex   ${
         scrollPosition > 190 ? "fixed  right-0 top-0 " : "relative"
       }`}
     >
