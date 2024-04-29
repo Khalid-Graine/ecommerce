@@ -3,6 +3,7 @@ import Breadcrumb from "./components/parts/header/Breadcrumb";
 import TheHeader from "./layout/TheHeader";
 import TheFooter from "./layout/TheFooter";
 import NotificationModule from "./components/NotificationModule";
+import ExclusiveClubPromo from "./components/parts/ExclusiveClubPromo";
 
 function App() {
  
@@ -12,7 +13,8 @@ function App() {
         <TheHeader />
         <Breadcrumb />
         <Outlet />
-
+       <ExclusiveClubPromo />
+        
         <TheFooter />
         <NotificationModule />
        
