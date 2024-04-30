@@ -43,16 +43,7 @@ const ExclusiveClubPromo = () => {
                   </label>
                 </div>
               </form>
-              <div className="border">
-                <ul className="flex gap-2 *:flex  *:size-10 *:items-center *:justify-center *:rounded-full *:bg-green-500 *:text-white">
-                  <li>
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </li>
-                  <li>
-                    <i className="fa-brands fa-x-twitter"></i>
-                  </li>
-                </ul>
-              </div>
+              <SocialMedia />
             </div>
           </div>
           {/* div 2 */}
@@ -69,3 +60,33 @@ const ExclusiveClubPromo = () => {
 };
 
 export default ExclusiveClubPromo;
+
+const SocialMedia = () => {
+  return (
+    <div className="my-2">
+      <ul className="flex gap-3 *:flex  *:size-11 *:items-center *:justify-center *:rounded-full *:bg-blue-500 *:text-white *:cursor-pointer">
+        <li>
+          <i className="fa-brands fa-facebook-f"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-x-twitter"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-pinterest-p"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-instagram"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-whatsapp"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-reddit-alien"></i>
+        </li>
+        <li>
+          <i className="fa-brands fa-tiktok"></i>
+        </li>
+      </ul>
+    </div>
+  );
+};
