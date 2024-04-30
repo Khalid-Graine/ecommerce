@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const TheFooter = () => {
   return (
-    <div className="">
+    <div>
       <div>links</div>
-      <div className="sides grid grid-cols-1 bg-[#303841] lg:grid-cols-2 py-8 gap-y-12">
+      <div className="sides grid grid-cols-1 gap-y-12 bg-[#303841] py-8 lg:grid-cols-2">
         <div>
-        
-        <TheTitle text={'follow us'} />
-          <div className="my-2"></div>
+          <TheTitle text={"follow us"} />
           <SocialMedia />
-          <p>Copyright © 2019, Your Store, All Rights Reserved</p>
+          <p className="mt-1 text-[#cccccc]">
+            Copyright © 2019, Your Store, All Rights Reserved
+          </p>
         </div>
         <div>
-          
-          <TheTitle text={'newsletter'} />
-          <p>
-          Don not miss any updates or promotions by signing up to our newsletter.
+          <TheTitle text={"newsletter"} />
+          <p className="text-[#cccccc]">
+            Don not miss any updates or promotions by signing up to our
+            newsletter.
           </p>
           <TheForm />
         </div>
@@ -26,28 +26,62 @@ const TheFooter = () => {
 };
 
 export default TheFooter;
-const TheTitle = ({text}) => {
+
+const TheTitle = ({ text }) => {
   return (
-    <div className="text-lg font-semibold text-white uppercase">
+    <div className="mb-2 text-lg font-semibold uppercase text-white">
       {text}
     </div>
-  )
-}
+  );
+};
 
 const TheForm = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const [email, setEmail] = useState("kkk");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!isChecked) {
+      alert("Warning: You must agree to the Privacy Policy!");
+      return;
+    }
+
+    if (emailRegex.test(email)) {
+      alert("You have been subscribed to our newsletter.");
+      setEmail('')
+      setIsChecked(false)
+    } else {
+      alert("E-Mail Address does not appear to be valid!");
+    }
+  };
   return (
-    <form >
-            <div className="w-full flex rounded-md overflow-hidden">
-              <input type="text" className="flex-grow" />
-              <button type="submit" className="px-2 bg-blue-500 text-white py-1">submit</button>
-            </div>
-            <div className="flex gap-2">
-            <input type="checkbox"  />
-            <p>I have read and agree to the <span className="text-blue-500">Privacy Policy</span></p>
-            </div>
-          </form>
-  )
-}
+    <form onSubmit={(event) => handleSubmit(event)}>
+      <div className="my-1 flex w-full overflow-hidden rounded-md">
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="flex-grow px-2"
+        />
+        <button type="submit" className="bg-blue-500 px-2 py-1 text-white">
+          submit
+        </button>
+      </div>
+      <div className="flex gap-2">
+        <input
+          type="checkbox"
+          onChange={() => setIsChecked(!isChecked)}
+          checked={isChecked}
+        />
+        <p className="text-[#cccccc]">
+          I have read and agree to the{" "}
+          <span className="text-blue-500">Privacy Policy</span>
+        </p>
+      </div>
+    </form>
+  );
+};
 const SocialMedia = () => {
   return (
     <ul className="flex gap-3 *:flex *:size-11 *:cursor-pointer *:items-center *:justify-center *:rounded-full *:bg-blue-500 *:text-2xl *:text-white">
