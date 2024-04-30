@@ -2,19 +2,37 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const ExclusiveClubPromo = () => {
+  const [email,setEmail] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [isECPromoActive, setECPromoActive] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setECPromoActive(true);
-    }, 2000);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);
   const handlecheck = () => {
     setIsChecked(!isChecked)
   }
+
+  const handleSubmit = (event) => {
+     event.preventDefault();
+     if()
+    if(isEmailValid(email)) {
+      alert('You have been subscribed to our newsletter.')
+      setECPromoActive(false)
+    } else {
+      alert('E-Mail Address does not appear to be valid!')
+    }
+  }
+
+  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+const isEmailValid = (email) => {
+  return emailRegex.test(email);
+}
   return (
     <>
       {/* div parent */}
@@ -36,17 +54,20 @@ const ExclusiveClubPromo = () => {
                 Sign up and Save! Get a $10 gift in your inbox immediately after
                 you sign up for our newsletter
               </p>
-              <form className="my-2 w-full">
+              <form onSubmit={handleSubmit} className="my-2 w-full">
                 <div className="flex border border-gray-300 bg-gray-300">
                   <input
-                    type="email"
+                    type="text"
                     className="flex-grow px-2 outline-none"
                     placeholder="Your Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                  <div className="flex cursor-pointer items-center justify-center gap-2 bg-blue-600 px-3 py-2 text-white">
-                    <i className="fa-regular fa-envelope text-lg"></i>
+                 
+                  <button  type="submit" className="flex cursor-pointer items-center justify-center gap-2 bg-blue-600 px-3 py-2 text-white">
+                  <i className="fa-regular fa-envelope text-lg"></i>
                     <span> Sign up</span>
-                  </div>
+                  </button>
                 </div>
 
                 <div>
