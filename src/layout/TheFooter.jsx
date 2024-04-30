@@ -4,15 +4,21 @@ const TheFooter = () => {
   return (
     <div className="">
       <div>links</div>
-      <div className="sides grid grid-cols-1 bg-[#303841] lg:grid-cols-2">
+      <div className="sides grid grid-cols-1 bg-[#303841] lg:grid-cols-2 py-8 gap-y-12">
         <div>
-        <h3 className="text-lg font-semibold text-white uppercase">follow us</h3>
+        
+        <TheTitle text={'follow us'} />
           <div className="my-2"></div>
           <SocialMedia />
           <p>Copyright © 2019, Your Store, All Rights Reserved</p>
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white uppercase">NEWSLETTER</h3>
+          
+          <TheTitle text={'newsletter'} />
+          <p>
+          Don not miss any updates or promotions by signing up to our newsletter.
+          </p>
+          <TheForm />
         </div>
       </div>
     </div>
@@ -20,7 +26,28 @@ const TheFooter = () => {
 };
 
 export default TheFooter;
+const TheTitle = ({text}) => {
+  return (
+    <div className="text-lg font-semibold text-white uppercase">
+      {text}
+    </div>
+  )
+}
 
+const TheForm = () => {
+  return (
+    <form >
+            <div className="w-full flex rounded-md overflow-hidden">
+              <input type="text" className="flex-grow" />
+              <button type="submit" className="px-2 bg-blue-500 text-white py-1">submit</button>
+            </div>
+            <div className="flex gap-2">
+            <input type="checkbox"  />
+            <p>I have read and agree to the <span className="text-blue-500">Privacy Policy</span></p>
+            </div>
+          </form>
+  )
+}
 const SocialMedia = () => {
   return (
     <ul className="flex gap-3 *:flex *:size-11 *:cursor-pointer *:items-center *:justify-center *:rounded-full *:bg-blue-500 *:text-2xl *:text-white">
