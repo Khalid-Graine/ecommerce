@@ -2,9 +2,9 @@ import React from 'react';
 
 const FeaturesSection = () => {
   return (
-    <div className="sides bg-slate-300 py-6">
+    <div className="sides bg-slate-500 py-6">
       <h3 className="py-6 text-center font-bold text-2xl">Why Buy From Us?</h3>
-      <ul className="grid grid-cols-2 gap-6">
+      <ul className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-3">
         <FeatureItem
           iconClass="fa-hourglass-start"
           title="Title 1"
