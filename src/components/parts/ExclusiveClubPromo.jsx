@@ -1,17 +1,31 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 const ExclusiveClubPromo = () => {
+  const [isECPromoActive, setECPromoActive] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setECPromoActive(true);
+    }, 2000);
+
+    // Clean up the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       {/* div parent */}
-      <div className="fixed top-0 flex h-screen w-full items-center justify-center bg-yellow-300  p-4">
+      {isECPromoActive && <div className="fixed top-0 flex h-screen w-full items-center justify-center bg-black bg-opacity-80  p-4 ">
         <div className="w-full  max-w-[800px] overflow-hidden rounded-md">
           {/* div 1 */}
           <div className="grid h-[300px] grid-cols-12 gap-6  overflow-hidden bg-white">
-            <div className="hidden   bg-red-700 sm:col-span-4 sm:flex">
+            <div className="hidden   bg-red-700 sm:col-span-5 sm:flex">
               <img src="src/assets/mook.jpg" alt="" />
             </div>
-            <div className="col-span-12 bg-white p-2   sm:col-span-8">
+            <div className="col-span-12 bg-white p-2   sm:col-span-7">
               <div className="flex justify-end">
-                <i className="fa-solid fa-xmark flex size-7 cursor-pointer items-center justify-center rounded-full bg-blue-500 text-sm text-white"></i>
+                <i onClick={() => setECPromoActive(false)} className="fa-solid fa-xmark flex size-7 cursor-pointer items-center justify-center rounded-full bg-blue-500 text-sm text-white"></i>
               </div>
               <h3 className="text-lg font-semibold text-[#303841]">
                 JOIN OUR EXCLUSIVE CLUB
@@ -47,14 +61,14 @@ const ExclusiveClubPromo = () => {
             </div>
           </div>
           {/* div 2 */}
-          <div className="bg-gray-100 px-2 py-1">
+          <div className="bg-gray-200 px-2 py-1">
             <form action="">
               <input type="checkbox" name="" id="" />
               <label className="ml-1 text-[#333333]">dont show me again</label>
             </form>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 };
@@ -64,7 +78,7 @@ export default ExclusiveClubPromo;
 const SocialMedia = () => {
   return (
     <div className="my-2">
-      <ul className="flex gap-3 *:flex  *:size-11 *:items-center *:justify-center *:rounded-full *:bg-blue-500 *:text-white *:cursor-pointer">
+      <ul className="flex gap-3 *:flex  *:size-11 *:items-center *:justify-center *:rounded-full *:bg-blue-500 *:text-white *:text-2xl *:cursor-pointer">
         <li>
           <i className="fa-brands fa-facebook-f"></i>
         </li>
@@ -83,10 +97,10 @@ const SocialMedia = () => {
         <li>
           <i className="fa-brands fa-reddit-alien"></i>
         </li>
-        <li>
-          <i className="fa-brands fa-tiktok"></i>
-        </li>
       </ul>
+      
     </div>
+   
   );
 };
+
