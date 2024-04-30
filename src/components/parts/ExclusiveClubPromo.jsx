@@ -19,7 +19,10 @@ const ExclusiveClubPromo = () => {
 
   const handleSubmit = (event) => {
      event.preventDefault();
-     if()
+     if(!isChecked) {
+        alert('Warning: You must agree to the Privacy Policy!')
+        return;
+     }
     if(isEmailValid(email)) {
       alert('You have been subscribed to our newsletter.')
       setECPromoActive(false)
