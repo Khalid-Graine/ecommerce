@@ -2,9 +2,9 @@ import React from 'react';
 
 const FeaturesSection = () => {
   return (
-    <div className="sides">
-      <h3 className="my-3 mt-5 text-center">Why Buy From Us?</h3>
-      <ul className="bg-green-100 grid grid-cols-2 gap-6">
+    <div className="sides bg-slate-300 py-6">
+      <h3 className="py-6 text-center font-bold text-2xl">Why Buy From Us?</h3>
+      <ul className="grid grid-cols-2 gap-6">
         <FeatureItem
           iconClass="fa-hourglass-start"
           title="Title 1"
@@ -33,11 +33,11 @@ const FeaturesSection = () => {
 const FeatureItem = ({ iconClass, title, description }) => {
   return (
     <li className="flex flex-col items-center gap-2">
-      <div className="bg-red-300 size-20 flex justify-center items-center rounded-full *:text-3xl">
-        <i className={`fa-solid ${iconClass}`}></i>
+      <div className="bg-red-600 size-20 flex justify-center items-center rounded-full ">
+        <i className={`fa-solid ${iconClass} text-3xl text-white`}></i>
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className='text-lg font-semibold text-white'>{title}</h3>
+      <p className='text-center text-[#3d3d3d]'>{description}</p>
     </li>
   );
 };
