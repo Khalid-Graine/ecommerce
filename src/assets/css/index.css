@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
 .test {
   /* background-color: blue; */
   @apply bg-yellow-400;
 }
-.material-icons {
-  /* font-size: 24px; */
-  font-size: 36px;
-  /* font-size: 36px;
-  font-size: 48px; */
-}
+
 .sides {
   @apply px-3 md:px-6;
 }
