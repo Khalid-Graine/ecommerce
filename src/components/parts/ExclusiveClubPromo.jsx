@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const ExclusiveClubPromo = () => {
+  const [isChecked, setIsChecked] = useState(false);
   const [isECPromoActive, setECPromoActive] = useState(false);
 
   useEffect(() => {
@@ -9,14 +10,15 @@ const ExclusiveClubPromo = () => {
       setECPromoActive(true);
     }, 2000);
 
-    // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
   }, []);
-
+  const handlecheck = () => {
+    setIsChecked(!isChecked)
+  }
   return (
     <>
       {/* div parent */}
-      {isECPromoActive && <div className="fixed top-0 flex h-screen w-full items-center justify-center bg-black bg-opacity-80  p-4 ">
+      {isECPromoActive && <div className="fixed top-0 flex h-screen w-full items-center justify-center bg-black bg-opacity-80  p-4">
         <div className="w-full  max-w-[800px] overflow-hidden rounded-md">
           {/* div 1 */}
           <div className="grid h-[300px] grid-cols-12 gap-6  overflow-hidden bg-white">
@@ -48,7 +50,7 @@ const ExclusiveClubPromo = () => {
                 </div>
 
                 <div>
-                  <input type="checkbox" name="" id="" />
+                  <input type="checkbox" checked={isChecked} onChange={() => handlecheck()} />
                   <label className="ml-1 text-[#333333]">
                     I have read and agree to the{" "}
                     <a href="http://" className="text-blue-600">
