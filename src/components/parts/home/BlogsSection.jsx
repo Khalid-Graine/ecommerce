@@ -16,7 +16,7 @@ const BlogsSection = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          
+
           dots: true,
         },
       },
@@ -59,17 +59,27 @@ export default BlogsSection;
 
 const CarouselItem = ({ text }) => {
   return (
-    <div className="flex  w-full  p-2">
-      <div className="bg-white flex flex-col items-center justify-center  rounded-md">
-        <h3>{text}</h3>
-        <p>title</p>
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-        <div className="w-full h-[180px] overflow-hidden flex justify-center items-center  rounded-md"><img src="src/assets/iphone.jpg"  alt="" />
+    <div className="flex  w-full  p-2 ">
+      <div className="flex flex-col items-center justify-center   bg-white overflow-hidden rounded-t-sm">
+        <div className="flex h-[180px] w-full items-center justify-center overflow-hidden relative">
+          <img src="src/assets/iphone.jpg" alt="" />
+          <div className="absolute top-2 left-2 bg-green-300 flex flex-col justify-center items-center size-10  leading-4 ">
+            <span className="font-semibold">02</span>
+            <span>Aug</span>
+          </div>
+          <div className="bg-black absolute bottom-0 w-full text-white text-center py-1">Lorem ipsum dolor sit amet.</div>
         </div>
-        
+        <p>title {text}</p>
+        <p className="text-center">
+          Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatum, sit blanditiis? Quos numquam animi nesciunt tenetur
+          adipisci at consequuntur consequatur? ipsum dolor sit amet. Lorem
+          ipsum dolor sit amet.
+        </p>
+        <button className="rounded-sm bg-blue-500 px-6 py-1 uppercase text-white mb-2">
+          Read
+        </button>
       </div>
     </div>
   );
 };
-
-

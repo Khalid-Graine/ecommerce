@@ -106,7 +106,7 @@ body {
 .slick-prev:before,
 .slick-next:before {
   
-  font-size: 24px !important;
+  font-size: 28px !important;
   color: purple !important;
 }
 .slick-dots li button::before { 
