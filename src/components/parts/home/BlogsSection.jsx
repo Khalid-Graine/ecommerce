@@ -60,14 +60,29 @@ export default BlogsSection;
 const CarouselItem = ({ text }) => {
   return (
     <div className="flex  w-full  p-2 ">
-      <div className="flex flex-col items-center justify-center   bg-white overflow-hidden rounded-t-sm">
-        <div className="flex h-[180px] w-full items-center justify-center overflow-hidden relative">
+      <div className="flex flex-col items-center justify-center   overflow-hidden rounded-t-sm bg-white">
+        <div className="relative flex h-[180px] w-full items-center justify-center overflow-hidden">
           <img src="src/assets/iphone.jpg" alt="" />
-          <div className="absolute top-2 left-2 bg-green-300 flex flex-col justify-center items-center size-10  leading-4 ">
+          <div className="absolute left-2 top-2 flex size-10 flex-col items-center justify-center bg-red-500  leading-4 text-white ">
             <span className="font-semibold">02</span>
             <span>Aug</span>
           </div>
-          <div className="bg-black absolute bottom-0 w-full text-white text-center py-1">Lorem ipsum dolor sit amet.</div>
+          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 py-1 text-center text-white ">
+            <ul className="flex justify-center gap-4 *:flex *:items-center *:gap-1">
+              <li>
+                <i className="fa-solid fa-user"></i>
+                <p>Admin</p>
+              </li>
+              <li>
+                <i className="fa-regular fa-comment-dots"></i>
+                <p>32000</p>
+              </li>
+              <li>
+                <i className="fa-regular fa-eye"></i>
+                <p>10234</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <p>title {text}</p>
         <p className="text-center">
@@ -76,7 +91,7 @@ const CarouselItem = ({ text }) => {
           adipisci at consequuntur consequatur? ipsum dolor sit amet. Lorem
           ipsum dolor sit amet.
         </p>
-        <button className="rounded-sm bg-blue-500 px-6 py-1 uppercase text-white mb-2">
+        <button className="mb-2 rounded-sm bg-blue-500 px-6 py-1 uppercase text-white">
           Read
         </button>
       </div>
