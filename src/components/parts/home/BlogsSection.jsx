@@ -65,10 +65,10 @@ const CarouselItem = ({ text }) => {
           <img src="src/assets/iphone.jpg" alt="" />
           <div className="absolute left-2 top-2 flex size-10 flex-col items-center justify-center bg-red-500  leading-4 text-white ">
             <span className="font-semibold">02</span>
-            <span>Aug</span>
+            <span className="text-xs">Aug</span>
           </div>
           <div className="absolute bottom-0 w-full bg-black bg-opacity-50 py-1 text-center text-white ">
-            <ul className="flex justify-center gap-4 *:flex *:items-center *:gap-1">
+            <ul className="flex justify-center gap-4 *:flex *:items-center *:gap-1 text-sm">
               <li>
                 <i className="fa-solid fa-user"></i>
                 <p>Admin</p>
@@ -84,7 +84,7 @@ const CarouselItem = ({ text }) => {
             </ul>
           </div>
         </div>
-        <p>title {text}</p>
+        <h3 className=" font-bold text-lg">title Lorem, ipsum {text}</h3>
         <p className="text-center">
           Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Voluptatum, sit blanditiis? Quos numquam animi nesciunt tenetur
