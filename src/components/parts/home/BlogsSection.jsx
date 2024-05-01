@@ -62,13 +62,19 @@ const CarouselItem = ({ text }) => {
     <div className="flex  w-full  p-2 ">
       <div className="flex flex-col items-center justify-center   overflow-hidden rounded-t-sm bg-white">
         <div className="relative flex h-[180px] w-full items-center justify-center overflow-hidden bg-yellow-300">
-          <img src="src/assets/iphone.jpg" className="h-full w-full object-fill" alt="" />
+          <a href="#">
+            <img
+              src="src/assets/iphone.jpg"
+              className="h-full w-full object-fill"
+              alt=""
+            />
+          </a>
           <div className="absolute left-2 top-2 flex size-10 flex-col items-center justify-center bg-red-500  leading-4 text-white ">
             <span className="font-semibold">02</span>
             <span className="text-xs">Aug</span>
           </div>
           <div className="absolute bottom-0 w-full bg-black bg-opacity-50 py-1 text-center text-white ">
-            <ul className="flex justify-center gap-4 *:flex *:items-center *:gap-1 text-sm">
+            <ul className="flex justify-center gap-4 text-sm *:flex *:items-center *:gap-1">
               <li>
                 <i className="fa-solid fa-user"></i>
                 <p>Admin</p>
@@ -84,18 +90,24 @@ const CarouselItem = ({ text }) => {
             </ul>
           </div>
         </div>
-       <div className="flex items-center flex-col gap-2 py-3">
-       <h3 className=" font-bold text-lg text-[#303841]">title Lorem, ipsum {text}</h3>
-        <p className="text-center text-[#333333]">
-          Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Voluptatum, sit blanditiis? Quos numquam animi nesciunt tenetur
-          adipisci at consequuntur consequatur? ipsum dolor sit amet. Lorem
-          ipsum dolor sit amet.
-        </p>
-        <button className="mb-2 rounded-sm bg-blue-500 px-6 py-1 uppercase text-white">
-          Read
-        </button>
-       </div>
+        <div className="flex flex-col items-center gap-2 py-3">
+          <a href="#">
+            <h3 className=" text-lg font-bold text-[#303841]">
+              title Lorem, ipsum {text}
+            </h3>
+          </a>
+          <p className="text-center text-[#333333]">
+            Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatum, sit blanditiis? Quos numquam animi nesciunt tenetur
+            adipisci at consequuntur consequatur? ipsum dolor sit amet. Lorem
+            ipsum dolor sit amet.
+          </p>
+          <a href="#">
+            <button className="mb-2 rounded-sm bg-blue-500 px-6 py-1 uppercase text-white">
+              Read
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );
