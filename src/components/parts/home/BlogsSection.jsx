@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { sliderSettings } from "./../../../assets/js/sliderSettings";
 import { useState } from "react";
-
+import '../../../assets/css/BlogsCarousel.css'
 const BlogsSection = () => {
   const [Blogs, setBlogs] = useState([
     {
@@ -11,7 +11,7 @@ const BlogsSection = () => {
       date: "02 aug",
       imagePath: "src/assets/iphone.jpg",
       description:
-        "Sign up and Save! Get a $10 gift in your inbox immediately after you sign up for our newsletter",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aspernatur temporibus, soluta earum non excepturi quia autem rem vitae repellendus, adipisci, dolores nam. Consectetur quo, necessitatibus qui magni doloribus temporibus.",
       blogLink: "#",
       commentCount: "77000",
       viewCount: "21222",
@@ -22,7 +22,7 @@ const BlogsSection = () => {
       date: "02 aug",
       imagePath: "src/assets/iphone.jpg",
       description:
-        "Sign up and Save! Get a $10 gift in your inbox immediately after you sign up for our newsletter",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aspernatur temporibus, soluta earum non excepturi quia autem rem vitae repellendus, adipisci, dolores nam. Consectetur quo, necessitatibus qui magni doloribus temporibus.",
       blogLink: "#",
       commentCount: "77000",
       viewCount: "21222",
@@ -33,7 +33,7 @@ const BlogsSection = () => {
       date: "02 aug",
       imagePath: "src/assets/iphone.jpg",
       description:
-        "Sign up and Save! Get a $10 gift in your inbox immediately after you sign up for our newsletter",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aspernatur temporibus, soluta earum non excepturi quia autem rem vitae repellendus, adipisci, dolores nam. Consectetur quo, necessitatibus qui magni doloribus temporibus.",
       blogLink: "#",
       commentCount: "77000",
       viewCount: "21222",
@@ -44,7 +44,7 @@ const BlogsSection = () => {
       date: "02 aug",
       imagePath: "src/assets/iphone.jpg",
       description:
-        "Sign up and Save! Get a $10 gift in your inbox immediately after you sign up for our newsletter",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aspernatur temporibus, soluta earum non excepturi quia autem rem vitae repellendus, adipisci, dolores nam. Consectetur quo, necessitatibus qui magni doloribus temporibus.",
       blogLink: "#",
       commentCount: "77000",
       viewCount: "21222",
@@ -55,7 +55,7 @@ const BlogsSection = () => {
  
   return (
     <div className="sides bg-gray-200 py-10">
-      <div>From the Blog</div>
+      <h2 className="section-title">From the Blog</h2>
       <div className="p-4 ">
         <div className="slider-container px-2 ">
           <Slider {...sliderSettings}>
@@ -74,7 +74,7 @@ export default BlogsSection;
 const CarouselItem = ({ blog }) => {
   return (
     <div className="flex  w-full  p-2 ">
-      <div className="blog-cart flex flex-col items-center justify-center overflow-hidden   rounded-t-sm border bg-white">
+      <div className="blog-cart flex flex-col items-center justify-center overflow-hidden   rounded-t-sm  bg-white">
         <div className="relative flex h-[180px] w-full items-center justify-center overflow-hidden bg-yellow-300">
           <a href={blog.blogLink}>
             <img
@@ -104,7 +104,7 @@ const CarouselItem = ({ blog }) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-2 py-3">
+        <div className="flex flex-col items-center gap-2 py-3 px-2">
           <a href={blog.blogLink}>
             <h3 className=" text-lg font-bold text-[#303841]">{blog.title}</h3>
           </a>
@@ -114,6 +114,7 @@ const CarouselItem = ({ blog }) => {
               Read
             </button>
           </a>
+         
         </div>
       </div>
     </div>

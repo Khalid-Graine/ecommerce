@@ -1,0 +1,17 @@
+
+.slick-prev,
+.slick-next {
+  font-size: 0px !important;
+  color: red !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  
+  font-size: 28px !important;
+  color: red !important;
+}
+.slick-dots li button::before { 
+  overflow: hidden;
+  height: 6px !important;
+  background-color: red;
+}

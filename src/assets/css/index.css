@@ -97,20 +97,6 @@ body {
   @apply my-4 h-1 w-full  bg-red-500;
 }
 
-
-.slick-prev,
-.slick-next {
-  font-size: 0px !important;
-  color: purple !important;
-}
-.slick-prev:before,
-.slick-next:before {
-  
-  font-size: 28px !important;
-  color: purple !important;
-}
-.slick-dots li button::before { 
-  overflow: hidden;
-  height: 6px !important;
-  background-color: purple;
+.section-title {
+  @apply text-3xl font-bold border-red-500 border-b w-fit mx-auto my-4
 }
