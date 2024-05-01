@@ -3,8 +3,55 @@ import React, { useState } from "react";
 const TheFooter = () => {
   return (
     <div>
-      <div>links</div>
-      <div className="sides grid grid-cols-1 gap-y-12 bg-[#303841] py-8 lg:grid-cols-2">
+
+
+
+
+      <div className="sides py-4 bg-gray-600 grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4">
+        <div>
+          <TheTitle text={'text'} />
+          <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+          </ul>
+        </div>
+        <div>
+          <h3>title Lorem, ipsum.</h3>
+          <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+          </ul>
+        </div>
+        <div>
+          <h3>title Lorem, ipsum.</h3>
+          <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+          </ul>
+        </div>
+        <div>
+          <h3>title Lorem, ipsum.</h3>
+          <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+      <div className="sides grid grid-cols-1 gap-y-12 bg-[#303841] py-4 lg:grid-cols-2">
+        {/* right-part */}
         <div>
           <TheTitle text={"follow us"} />
           <SocialMedia />
@@ -12,6 +59,7 @@ const TheFooter = () => {
             Copyright © 2019, Your Store, All Rights Reserved
           </p>
         </div>
+        {/* left-part */}
         <div>
           <TheTitle text={"newsletter"} />
           <p className="text-[#cccccc]">
@@ -29,7 +77,7 @@ export default TheFooter;
 
 const TheTitle = ({ text }) => {
   return (
-    <div className="mb-2 text-lg font-semibold uppercase text-white">
+    <div className="mb-2 w-fit border-0 border-b border-red-400 pb-[0.5px] text-lg font-semibold uppercase text-white">
       {text}
     </div>
   );
@@ -38,7 +86,7 @@ const TheTitle = ({ text }) => {
 const TheForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  const [email, setEmail] = useState("kkk");
+  const [email, setEmail] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -49,17 +97,18 @@ const TheForm = () => {
 
     if (emailRegex.test(email)) {
       alert("You have been subscribed to our newsletter.");
-      setEmail('')
-      setIsChecked(false)
+      setEmail("");
+      setIsChecked(false);
     } else {
       alert("E-Mail Address does not appear to be valid!");
     }
   };
   return (
     <form onSubmit={(event) => handleSubmit(event)}>
-      <div className="my-1 flex w-full overflow-hidden rounded-md">
+      <div className="my-1 flex w-full overflow-hidden rounded-sm">
         <input
           type="text"
+          placeholder="Write your email "
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="flex-grow px-2"
