@@ -3,52 +3,59 @@ import React, { useState } from "react";
 const TheFooter = () => {
   return (
     <div>
-
-
-
-
-      <div className="sides py-4 bg-gray-600 grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4">
+      <div className="sides grid grid-cols-2 gap-x-4 gap-y-6 bg-gray-600 py-4 lg:grid-cols-4">
         <div>
-          <TheTitle text={'text'} />
-          <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+          <TheTitle text={"CUSTOM LINKS"} />
+          <ul className="text-[#eeeeee]">
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
           </ul>
         </div>
         <div>
-          <h3>title Lorem, ipsum.</h3>
-          <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+          <TheTitle text={"CUSTOM LINKS"} />
+          <ul className="text-[#eeeeee]">
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
           </ul>
         </div>
         <div>
-          <h3>title Lorem, ipsum.</h3>
-          <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-          </ul>
-        </div>
-        <div>
-          <h3>title Lorem, ipsum.</h3>
-          <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+          <TheTitle text={"CUSTOM LINKS"} />
+          <ul className="text-[#eeeeee]">
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
+            <li>
+              <a href="http://">test</a>
+            </li>
           </ul>
         </div>
       </div>
-
-
-
-
 
       <div className="sides grid grid-cols-1 gap-y-12 bg-[#303841] py-4 lg:grid-cols-2">
         {/* right-part */}
