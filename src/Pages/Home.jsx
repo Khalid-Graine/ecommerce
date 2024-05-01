@@ -1,3 +1,4 @@
+import BlogsSection from "../components/parts/home/BlogsSection";
 import CenterArea from "../components/parts/home/CenterArea";
 import FeaturesSection from "../components/parts/home/FeaturesSection";
 import LeftSideBar from "../components/parts/home/LeftSideBar";
@@ -20,6 +21,8 @@ const Home = () => {
       </div>
       
       <FeaturesSection />
+      <BlogsSection />
+
     </>
   );
 };
