@@ -2,47 +2,15 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import { sliderSettings } from './../../../assets/js/sliderSettings';
 const BlogsSection = () => {
-  var settings = {
-    dots: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  console.log(sliderSettings)
   return (
     <div className="sides bg-gray-200 py-10">
       <div>From the Blog</div>
       <div className="p-4 ">
         <div className="slider-container px-2 ">
-          <Slider {...settings}>
+          <Slider {...sliderSettings}>
             <CarouselItem text={"1"} />
             <CarouselItem text={"2"} />
             <CarouselItem text={"3"} />
@@ -60,12 +28,12 @@ export default BlogsSection;
 const CarouselItem = ({ text }) => {
   return (
     <div className="flex  w-full  p-2 ">
-      <div className="flex flex-col items-center justify-center   overflow-hidden rounded-t-sm bg-white">
+      <div className="blog-cart border flex flex-col items-center justify-center   overflow-hidden rounded-t-sm bg-white">
         <div className="relative flex h-[180px] w-full items-center justify-center overflow-hidden bg-yellow-300">
           <a href="#">
             <img
               src="src/assets/iphone.jpg"
-              className="h-full w-full object-fill"
+              className="h-full w-full object-fill grayscale transition-all delay-75 duration-500 ease-in-out hover:grayscale-0"
               alt=""
             />
           </a>
