@@ -3,7 +3,7 @@ import React from "react";
 const LeftSideBar = () => {
   return (
     <div className="hidden  
-     min-w-[230px] flex-col bg-yellow-300 px-4 py-2 lm:flex">
+     min-w-[230px] flex-col  px-4 py-2 lm:flex">
       <div>
         <p className="title">title</p>
         <ul>

@@ -7,7 +7,7 @@ import RightSideBar from "../components/parts/home/RightSideBar";
 const Home = () => {
   return (
     <>
-      <div className="flex">
+      <div className="flex bg-[#E8E8E8]">
         {/* left side */}
         <LeftSideBar />
         {/* center */}
