@@ -2,16 +2,19 @@
 .slick-prev,
 .slick-next {
   font-size: 0px !important;
-  color: red !important;
+  color: green !important;
 }
 .slick-prev:before,
 .slick-next:before {
-  
   font-size: 28px !important;
-  color: red !important;
+  color: green !important;
+}
+.slick-prev:before {
+  margin-left: -10px;
 }
 .slick-dots li button::before { 
   overflow: hidden;
   height: 6px !important;
-  background-color: red;
+  top: -100% !important;
+  background-color: green;
 }
