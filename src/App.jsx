@@ -4,6 +4,7 @@ import TheHeader from "./layout/TheHeader";
 import TheFooter from "./layout/TheFooter";
 import NotificationModule from "./components/NotificationModule";
 import ExclusiveClubPromo from "./components/parts/ExclusiveClubPromo";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ExclusiveClubPromo />
         <TheFooter />
         <NotificationModule />
+        <ScrollToTop />
       </div>
     </>
   );
