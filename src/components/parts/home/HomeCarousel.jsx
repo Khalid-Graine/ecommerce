@@ -7,22 +7,25 @@ import "../../../assets/css/HomeCarousel.css";
 const HomeCarousel = () => {
   const carouselData = [
     {
-      title: "tite ",
+      title: "tlorem taf thiiim e msms ",
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "new",
+      butoonText: 'shop now'
     },
     {
-      title: "tite ",
+      title: "tlorem taf thiiim e msms ",
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "new",
+      butoonText: 'shop now'
     },
     {
-      title: "tite ",
+      title: "tlorem taf thiiim e msms ",
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "new",
+      butoonText: 'shop now'
     },
   ];
   return (
@@ -48,7 +51,7 @@ const CarouselItem = ({ item }) => {
           {item.label}
         </p>
         <h3 className=" text-3xl font-bold text-white">{item.title}</h3>
-        <MoreButton text={"read more"} link={item.link} />
+        <MoreButton text={item.butoonText} link={item.link} />
       </div>
       <img
         src={item.imagePath}
