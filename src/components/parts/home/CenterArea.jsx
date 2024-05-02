@@ -6,7 +6,7 @@ const CenterArea = () => {
     {
       title: "Sample Banner 1",
       link: "#",
-      picture: "src/assets/iphone2.webp",
+      picture: "src/assets/samsung.jpg",
     },
     {
       title: "Sample Banner 2",
@@ -47,15 +47,7 @@ const CenterArea = () => {
       {/* second div */}
       <div className="grid grid-cols-1 gap-1  lg:grid-cols-12">
         {modules.map((module, index) => (
-          <div key={index} className=" col-span-4 flex bg-slate-800 py-2">
-            <div className="flex items-center justify-center px-4">
-              <i className={module.icon}></i>
-            </div>
-            <div>
-              <h3 className="font-bold text-white">{module.title}</h3>
-              <p className=" text-gray-600">{module.description}</p>
-            </div>
-          </div>
+          <ModuleCard module={module} index={index} />
         ))}
       </div>
     </div>
@@ -63,7 +55,19 @@ const CenterArea = () => {
 };
 
 export default CenterArea;
-
+const ModuleCard = ({ module, index }) => {
+  return (
+    <div key={index} className=" col-span-4 flex bg-slate-800 py-2">
+      <div className="flex items-center justify-center px-4">
+        <i className={module.icon}></i>
+      </div>
+      <div>
+        <h3 className="font-bold text-white">{module.title}</h3>
+        <p className=" text-gray-600">{module.description}</p>
+      </div>
+    </div>
+  );
+};
 const Banner = ({ item }) => {
   return (
     <div className="relative col-span-full flex h-[150px] w-full items-center justify-center overflow-hidden bg-blue-400 sm:col-span-3">
