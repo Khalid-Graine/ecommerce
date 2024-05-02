@@ -19,10 +19,9 @@ const Home = () => {
         <i className="fa-solid fa-truck-fast"></i>
         <p>FREE FAST SHIPPING ON ORDERS ABOVE $100</p>
       </div>
-      
+
       <FeaturesSection />
       <BlogsSection />
-
     </>
   );
 };

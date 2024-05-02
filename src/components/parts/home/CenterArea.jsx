@@ -1,4 +1,5 @@
 import React from "react";
+import HomeCarousel from "./HomeCarousel";
 
 const CenterArea = () => {
   const modules = [
@@ -22,10 +23,11 @@ const CenterArea = () => {
     },
   ];
   return (
-    <div className="flex-grow border  border-y-0 border-black bg-red-100 p-4">
+    <div className="flex-grow border  border-y-0 border-black bg-red-700 p-4">
       {/* first div */}
       <div className="grid grid-cols-6 gap-4 bg-purple-500 pb-4">
-        <div className=" col-span-6 h-[300px] w-full bg-green-500"></div>
+        <HomeCarousel />
+        
         <div className="relative col-span-full flex h-[150px] w-full items-center justify-center overflow-hidden bg-blue-400 sm:col-span-3">
           <img
             className=" object-contain object-center "
@@ -49,7 +51,7 @@ const CenterArea = () => {
       </div>
 
       {/* second div */}
-      <div className="grid grid-cols-1 gap-1 bg-red-700 lg:grid-cols-12">
+      <div className="grid grid-cols-1 gap-1 bg-green-700 lg:grid-cols-12">
         {modules.map((module, index) => (
           <div key={index} className=" col-span-4 flex bg-slate-800 py-2">
             <div className="flex items-center justify-center px-4">

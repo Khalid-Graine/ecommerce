@@ -1,9 +1,9 @@
+import { sliderSettings } from "./../../../assets/js/sliderSettings";
+import { useState } from "react";
+import "../../../assets/css/BlogsCarousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { sliderSettings } from "./../../../assets/js/sliderSettings";
-import { useState } from "react";
-import '../../../assets/css/BlogsCarousel.css'
 const BlogsSection = () => {
   const [Blogs, setBlogs] = useState([
     {
@@ -52,7 +52,6 @@ const BlogsSection = () => {
     },
   ]);
 
- 
   return (
     <div className="sides bg-gray-200 py-10">
       <h2 className="section-title">From the Blog</h2>
@@ -104,7 +103,7 @@ const CarouselItem = ({ blog }) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-2 py-3 px-2">
+        <div className="flex flex-col items-center gap-2 px-2 py-3">
           <a href={blog.blogLink}>
             <h3 className=" text-lg font-bold text-[#303841]">{blog.title}</h3>
           </a>
@@ -114,7 +113,6 @@ const CarouselItem = ({ blog }) => {
               Read
             </button>
           </a>
-         
         </div>
       </div>
     </div>
