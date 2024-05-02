@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { HomeSliderSettings } from "../../../assets/js/HomeSliderSettings";
 import "../../../assets/css/HomeCarousel.css";
+
 const HomeCarousel = () => {
   const carouselData = [
     {
@@ -11,21 +12,21 @@ const HomeCarousel = () => {
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "phone",
-      butoonText: "shop now",
+      ButtonText: "shop now",
     },
     {
       title: "tlorem taf thiiim e msms ",
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "new",
-      butoonText: "shop now",
+      ButtonText: "shop now",
     },
     {
       title: "tlorem taf thiiim e msms ",
       link: "#",
       imagePath: "src/assets/iphone.jpg",
       label: "new",
-      butoonText: "shop now",
+      ButtonText: "shop now",
     },
   ];
   return (
@@ -49,7 +50,7 @@ const CarouselItem = ({ item }) => {
       <div className="flex flex-col gap-2">
         <Label>{item.label}</Label>
         <Title>{item.title}</Title>
-        <ReadMoreButton text={item.butoonText} link={item.link} />
+        <ReadMoreButton link={item.link}>{item.ButtonText}</ReadMoreButton>
       </div>
       <img
         src={item.imagePath}
@@ -64,11 +65,11 @@ const Title = ({ children }) => {
     <div className=" text-3xl font-bold capitalize text-white">{children}</div>
   );
 };
-const ReadMoreButton = ({ text, link }) => {
+const ReadMoreButton = ({ children, link }) => {
   return (
     <a href={link}>
       <button className="flex  w-fit items-center gap-2 rounded-sm border px-3 py-1 text-white transition-all duration-100 ease-linear hover:gap-3">
-        <span className="capitalize">{text}</span>
+        <span className="capitalize">{children}</span>
         <i className="fa-solid fa-arrow-right-long"></i>
       </button>
     </a>

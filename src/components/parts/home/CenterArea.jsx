@@ -2,6 +2,18 @@ import React from "react";
 import HomeCarousel from "./HomeCarousel";
 
 const CenterArea = () => {
+  const banners = [
+    {
+      title: "Sample Banner ",
+      link: "#",
+      picture: "src/assets/iphone2.webp",
+    },
+    {
+      title: "Sample Banner ",
+      link: "#",
+      picture: "src/assets/iphone2.webp",
+    },
+  ];
   const modules = [
     {
       title: "Lorem ipsum dolor sit.",
@@ -27,27 +39,9 @@ const CenterArea = () => {
       {/* first div */}
       <div className="grid grid-cols-6 gap-4  pb-4">
         <HomeCarousel />
-        
-        <div className="relative col-span-full flex h-[150px] w-full items-center justify-center overflow-hidden bg-blue-400 sm:col-span-3">
-          <img
-            className=" object-contain object-center "
-            src="src/assets/iphone.jpg"
-            alt=""
-          />
-          <button className="absolute bg-green-500 px-2 py-1 font-semibold uppercase text-white hover:bg-green-600 active:bg-green-500">
-            test banner 1
-          </button>
-        </div>
-        <div className="relative col-span-full flex h-[150px] w-full items-center justify-center overflow-hidden bg-blue-400 sm:col-span-3">
-          <img
-            className=" object-contain object-center "
-            src="src/assets/iphone2.webp"
-            alt=""
-          />
-          <button className="absolute bg-green-500 px-2 py-1 font-semibold uppercase text-white hover:bg-green-600 active:bg-green-500">
-            test banner 2
-          </button>
-        </div>
+        {banners.map((item, i) => (
+          <Banner item={item} />
+        ))}
       </div>
 
       {/* second div */}
@@ -69,3 +63,22 @@ const CenterArea = () => {
 };
 
 export default CenterArea;
+
+const Banner = ({ item }) => {
+  return (
+    <div className="relative col-span-full flex h-[150px] w-full items-center justify-center overflow-hidden bg-blue-400 sm:col-span-3">
+      <img
+        className=" object-contain object-center "
+        src={item.picture}
+        alt=""
+      />
+
+      <a
+        href={item.link}
+        className="absolute bg-green-500 px-2 py-1 font-semibold uppercase text-white hover:bg-green-600 active:bg-green-500"
+      >
+        {item.title}
+      </a>
+    </div>
+  );
+};
