@@ -4,12 +4,12 @@ import HomeCarousel from "./HomeCarousel";
 const CenterArea = () => {
   const banners = [
     {
-      title: "Sample Banner ",
+      title: "Sample Banner 1",
       link: "#",
       picture: "src/assets/iphone2.webp",
     },
     {
-      title: "Sample Banner ",
+      title: "Sample Banner 2",
       link: "#",
       picture: "src/assets/iphone2.webp",
     },
