@@ -32,7 +32,7 @@ const ScrollToTop = () => {
         className="fixed bottom-4 right-4  rounded-full text-white"
         onClick={scrollToTop}
       >
-        <i className="fa-solid fa-circle-arrow-up  text-4xl text-yellow-300 "></i>
+        <i className="fa-solid fa-circle-arrow-up  text-4xl text-blue-500 "></i>
       </button>
     )
   );
