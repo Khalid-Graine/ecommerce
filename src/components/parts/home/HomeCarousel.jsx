@@ -24,9 +24,9 @@ const Carouselitem = () => {
   return (
     <div className=" relative h-[300px] p-4 flex items-center hover:cursor-pointer">
       <div className="flex gap-2 flex-col">
-        <p className="rounded-sm text-white  py-1 bg-blue-400  w-fit px-2 ">title </p>
-        <h3 className=" text-xl text-white">Lorem ipsum dolor sit.</h3>
-        <button className="border  py-1 text-white w-fit px-6 rounded-sm flex items-center gap-2">
+        <p className="rounded-sm text-white  py-1 bg-blue-600  w-fit px-2 font-semibold">title </p>
+        <h3 className=" text-3xl text-white font-bold">Lorem ipsum dolor sit.</h3>
+        <button className="border  py-1 text-white w-fit px-3 rounded-sm flex items-center gap-2 hover:gap-3 transition-all ease-linear duration-100">
           <span>Read more</span>
         <i className="fa-solid fa-arrow-right-long"></i>
         </button>

@@ -12,9 +12,21 @@
 .Home-carousel .slick-prev:before {
   margin-left: -10px;
 }
+
 .Home-carousel .slick-dots li button::before { 
   overflow: hidden;
   height: 6px !important;
   top: -100% !important;
-  background-color: green;
+  opacity: 100%;
+  background-color: white;
+}
+
+/* Active */
+.Home-carousel .slick-dots li.slick-active button::before {
+  background-color: green !important;
+}
+
+/* Hover */
+.Home-carousel .slick-dots li:hover button::before {
+  background-color: green !important;
 }

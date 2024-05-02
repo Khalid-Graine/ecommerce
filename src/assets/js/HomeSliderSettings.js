@@ -1,4 +1,5 @@
 export const HomeSliderSettings = {
+ 
   dots: true,
   speed: 500,
   adaptiveHeight: true,
@@ -7,6 +8,7 @@ export const HomeSliderSettings = {
   slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
+
   cssEase: "linear",
 };
