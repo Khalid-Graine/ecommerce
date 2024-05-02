@@ -1,18 +1,18 @@
 
-.slick-prev,
-.slick-next {
+.Home-carousel .slick-prev,
+.Home-carousel .slick-next {
   font-size: 0px !important;
   color: green !important;
 }
-.slick-prev:before,
-.slick-next:before {
+.Home-carousel .slick-prev:before,
+.Home-carousel .slick-next:before {
   font-size: 28px !important;
   color: green !important;
 }
-.slick-prev:before {
+.Home-carousel .slick-prev:before {
   margin-left: -10px;
 }
-.slick-dots li button::before { 
+.Home-carousel .slick-dots li button::before { 
   overflow: hidden;
   height: 6px !important;
   top: -100% !important;
