@@ -2,14 +2,15 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { sliderSettings } from '../../../assets/js/sliderSettings';
+
+import { HomeSliderSettings } from '../../../assets/js/HomeSliderSettings';
 
 const HomeCarousel = () => {
   return (
-    <div className=" col-span-6 h-[300px] w-full bg-yellow-500">
-        <div className="p-4 ">
-        <div className="slider-container px-2 ">
-          <Slider {...sliderSettings}>
+    <div className="col-span-6 h-[300px] w-full bg-yellow-500 ">
+        <div className="p-4 border h-full ">
+        <div className="border slider-container px-2 w-full h-full ">
+          <Slider  {...HomeSliderSettings}>
           <Carouselitem />
           <Carouselitem />
           <Carouselitem />
