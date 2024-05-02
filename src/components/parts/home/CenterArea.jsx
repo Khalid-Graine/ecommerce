@@ -39,15 +39,15 @@ const CenterArea = () => {
       {/* first div */}
       <div className="grid grid-cols-6 gap-4  pb-4">
         <HomeCarousel />
-        {banners.map((item, i) => (
-          <Banner item={item} />
+        {banners.map((item, index) => (
+          <Banner key={index} item={item} />
         ))}
       </div>
 
       {/* second div */}
       <div className="grid grid-cols-1 gap-1  lg:grid-cols-12">
         {modules.map((module, index) => (
-          <ModuleCard module={module} index={index} />
+          <ModuleCard key={index} module={module} index={index} />
         ))}
       </div>
     </div>
@@ -55,9 +55,10 @@ const CenterArea = () => {
 };
 
 export default CenterArea;
-const ModuleCard = ({ module, index }) => {
+
+const ModuleCard = ({ module }) => {
   return (
-    <div key={index} className=" col-span-4 flex bg-slate-800 py-2">
+    <div  className=" col-span-4 flex bg-slate-800 py-2">
       <div className="flex items-center justify-center px-4">
         <i className={module.icon}></i>
       </div>
