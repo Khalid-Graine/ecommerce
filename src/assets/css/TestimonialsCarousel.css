@@ -11,13 +11,23 @@
 .Testimonials-Carousel .slick-prev,
 .Testimonials-Carousel .slick-next {
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+/* show arrows only if if the user is hovering on the parent comopnent */
+.Testimonials-Carousel:hover .slick-prev,
+.Testimonials-Carousel:hover .slick-next {
+  opacity: 1;
+}
+
 .Testimonials-Carousel .slick-prev {
   left: 6px;
 }
 .Testimonials-Carousel .slick-next {
   right: 12px;
 }
+
+
 .Testimonials-Carousel .slick-dots li button::before {
   overflow: hidden;
   height: 6px !important;
