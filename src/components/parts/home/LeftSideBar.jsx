@@ -9,11 +9,11 @@ const LeftSideBar = () => {
   const TestimonialsData = [
     {
       user: "test",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere.",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere. ",
     },
     {
       user: "test",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere.",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non,  dolor iusto saepe laboriosam eligendi nemo facere.",
     },
     {
       user: "test",
@@ -40,7 +40,7 @@ const LeftSideBar = () => {
         
         <div className="Testimonials-Carousel max-w-min">
           <Slider
-            className="* *:bg-yellow-400 "
+            className=" "
             {...TestimonialsSliderSettings}
           >
             {TestimonialsData.map((item,index) => (
@@ -59,6 +59,6 @@ const CarouselItem = ({item}) => {
   return <div>
          
          <p>{item.text}</p>
-         <p>{item.user}</p>
+         <p className="font-bold text-center text-lg">{item.user}</p>
   </div>;
 };
