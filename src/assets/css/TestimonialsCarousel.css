@@ -1,12 +1,12 @@
 .Testimonials-Carousel .slick-prev,
 .Testimonials-Carousel .slick-next {
   font-size: 0px !important;
-  color: green !important;
+  color: orange !important;
 }
 .Testimonials-Carousel .slick-prev:before,
 .Testimonials-Carousel .slick-next:before {
   font-size: 28px !important;
-  color: green !important;
+  color: orange !important;
 }
 .Testimonials-Carousel .slick-prev,
 .Testimonials-Carousel .slick-next {
@@ -28,10 +28,10 @@
 
 /* Active */
 .Testimonials-Carousel .slick-dots li.slick-active button::before {
-  background-color: green !important;
+  background-color: orange !important;
 }
 
 /* Hover */
 .Testimonials-Carousel .slick-dots li:hover button::before {
-  background-color: green !important;
+  background-color: orange !important;
 }
