@@ -25,7 +25,7 @@ const LeftSideBar = () => {
         <p className="title">WHAT PEOPLE SAY:</p>
         <TestimonialsCarousel />
        <div className="Testimonials-Carousel">
-       <Slider className="* *:bg-yellow-400 p-2" {...TestimonialsSliderSettings}>
+       <Slider className="* *:bg-yellow-400 " {...TestimonialsSliderSettings}>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
