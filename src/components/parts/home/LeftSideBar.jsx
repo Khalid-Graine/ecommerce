@@ -8,10 +8,16 @@ import "../../../assets/css/TestimonialsCarousel.css";
 import { TestimonialsSliderSettings } from "../../../assets/js/TestimonialsSliderSettings";
 
 const LeftSideBar = () => {
+  const Testimonials = [{
+    user: 'test',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere.'
+  }]
   return (
+    
     <div className="hidden  
      max-w-[230px] flex-col  px-4 py-2 lm:flex">
       <div>
+       
         <p className="title">title</p>
         <ul>
           <li>Product 1</li>
