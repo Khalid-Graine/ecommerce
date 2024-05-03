@@ -16,7 +16,7 @@ const LeftSideBar = () => {
       <div className="line"></div>
       <div>
         <p className="title">WHAT PEOPLE SAY:</p>
-        
+        <TestimonialsCarousel />
       </div>
     </div>
   );
@@ -27,6 +27,6 @@ export default LeftSideBar;
 
 const TestimonialsCarousel = () => {
   return (
-    
+
   )
 }
