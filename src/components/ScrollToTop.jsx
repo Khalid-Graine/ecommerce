@@ -27,14 +27,12 @@ const ScrollToTop = () => {
   };
 
   return (
-    isVisible && (
-      <button
-        className="fixed bottom-4 right-4  rounded-full text-white"
-        onClick={scrollToTop}
-      >
-        <i className="fa-solid fa-circle-arrow-up  text-4xl text-blue-500 "></i>
-      </button>
-    )
+    <button
+    className={`fixed  right-4  rounded-full text-white transition-all ease-in-out duration-1000 delay-75 ${isVisible ? 'bottom-4': ' -bottom-full'}`}
+    onClick={scrollToTop}
+  >
+    <i className="fa-solid fa-circle-arrow-up  text-4xl text-blue-500 "></i>
+  </button>
   );
 };
 
