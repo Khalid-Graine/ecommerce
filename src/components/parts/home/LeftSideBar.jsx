@@ -12,11 +12,11 @@ const LeftSideBar = () => {
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere. ",
     },
     {
-      user: "test",
+      user: "john adam",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non,  dolor iusto saepe laboriosam eligendi nemo facere.",
     },
     {
-      user: "test",
+      user: "ibraham adil",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere.",
     },
   ];
@@ -36,7 +36,7 @@ const LeftSideBar = () => {
       </div>
       <div className="line"></div>
       <div>
-        <p className="title">WHAT PEOPLE SAY:</p>
+        <p className="title pb-3">WHAT PEOPLE SAY:</p>
 
         <div className="Testimonials-Carousel max-w-min">
           <Slider className=" " {...TestimonialsSliderSettings}>
@@ -55,7 +55,7 @@ export default LeftSideBar;
 const CarouselItem = ({ item }) => {
   return (
     <div>
-       <div className="  flex items-center gap-2">
+       <div className="flex items-center gap-2">
         <img
           src="src/assets/user1.jpeg"
           className="size-12 rounded-full"
@@ -67,7 +67,7 @@ const CarouselItem = ({ item }) => {
           <p className="text-sm">Coe Founder</p>
         </div>
       </div>
-      <div className="">
+      <div className="py-2">
         <i className=" fa-solid fa-quote-left  inline text-xl text-red-600"></i>
         <p className="inline px-2">{item.text}</p>
         <i className="fa-solid fa-quote-right text-xl text-red-600"></i>
