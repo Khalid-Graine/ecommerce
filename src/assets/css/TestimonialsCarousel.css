@@ -13,10 +13,10 @@
   z-index: 2;
 }
 .Testimonials-Carousel .slick-prev {
-  left: 14px;
+  left: 6px;
 }
 .Testimonials-Carousel .slick-next {
-  right: 20px;
+  right: 12px;
 }
 .Testimonials-Carousel .slick-dots li button::before {
   overflow: hidden;

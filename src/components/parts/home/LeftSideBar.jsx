@@ -57,8 +57,12 @@ export default LeftSideBar;
 
 const CarouselItem = ({item}) => {
   return <div>
+         <div className="">
+         <i className=" fa-solid fa-quote-left  inline text-red-600"></i>
+         <p className="inline px-2">{item.text}</p>
+         <i className="fa-solid fa-quote-right text-red-600"></i>
+         </div>
          
-         <p>{item.text}</p>
          <p className="font-bold text-center text-lg">{item.user}</p>
   </div>;
 };
