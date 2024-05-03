@@ -1,4 +1,3 @@
-
 .Testimonials-Carousel .slick-prev,
 .Testimonials-Carousel .slick-next {
   font-size: 0px !important;
@@ -9,12 +8,17 @@
   font-size: 28px !important;
   color: green !important;
 }
-.Testimonials-Carousel .slick-prev:before {
-  margin-left: 20px;
-  z-index: -99999999;
+.Testimonials-Carousel .slick-prev,
+.Testimonials-Carousel .slick-next {
+  z-index: 2;
 }
-
-.Testimonials-Carousel .slick-dots li button::before { 
+.Testimonials-Carousel .slick-prev {
+  left: 14px;
+}
+.Testimonials-Carousel .slick-next {
+  right: 20px;
+}
+.Testimonials-Carousel .slick-dots li button::before {
   overflow: hidden;
   height: 6px !important;
   top: 0px !important;
