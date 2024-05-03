@@ -24,12 +24,14 @@ const LeftSideBar = () => {
       <div>
         <p className="title">WHAT PEOPLE SAY:</p>
         <TestimonialsCarousel />
-        <Slider {...TestimonialsSliderSettings}>
+       <div className="Testimonials-Carousel">
+       <Slider className="* *:bg-yellow-400 p-2" {...TestimonialsSliderSettings}>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
         </Slider>
+       </div>
       </div>
     </div>
   );
