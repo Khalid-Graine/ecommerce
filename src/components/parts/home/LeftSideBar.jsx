@@ -1,5 +1,12 @@
 import React from "react";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { HomeSliderSettings } from "../../../assets/js/HomeSliderSettings";
+import "../../../assets/css/HomeCarousel.css";
+import { TestimonialsSliderSettings } from "../../../assets/js/TestimonialsSliderSettings";
+
 const LeftSideBar = () => {
   return (
     <div className="hidden  
@@ -17,6 +24,12 @@ const LeftSideBar = () => {
       <div>
         <p className="title">WHAT PEOPLE SAY:</p>
         <TestimonialsCarousel />
+        <Slider {...TestimonialsSliderSettings}>
+          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
+          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
+          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
+          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
+        </Slider>
       </div>
     </div>
   );
@@ -27,6 +40,6 @@ export default LeftSideBar;
 
 const TestimonialsCarousel = () => {
   return (
-
+    <div>e</div>
   )
 }
