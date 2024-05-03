@@ -10,7 +10,7 @@ import { TestimonialsSliderSettings } from "../../../assets/js/TestimonialsSlide
 const LeftSideBar = () => {
   return (
     <div className="hidden  
-     min-w-[230px] flex-col  px-4 py-2 lm:flex">
+     max-w-[230px] flex-col  px-4 py-2 lm:flex">
       <div>
         <p className="title">title</p>
         <ul>
@@ -24,12 +24,9 @@ const LeftSideBar = () => {
       <div>
         <p className="title">WHAT PEOPLE SAY:</p>
         <TestimonialsCarousel />
-       <div className="Testimonials-Carousel">
+       <div className="Testimonials-Carousel max-w-min">
        <Slider className="* *:bg-yellow-400 " {...TestimonialsSliderSettings}>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sapiente.</div>
+          
         </Slider>
        </div>
       </div>
@@ -40,7 +37,7 @@ const LeftSideBar = () => {
 export default LeftSideBar;
 
 
-const TestimonialsCarousel = () => {
+const CarouselItem = () => {
   return (
     <div>e</div>
   )
