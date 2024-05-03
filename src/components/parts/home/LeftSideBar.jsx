@@ -8,7 +8,7 @@ import { TestimonialsSliderSettings } from "../../../assets/js/TestimonialsSlide
 const LeftSideBar = () => {
   const TestimonialsData = [
     {
-      user: "test",
+      user: "khalid hicham",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio necessitatibus voluptates facilis non, ab repudiandae ipsam qui enim cupiditate id nisi eius dolor iusto saepe laboriosam eligendi nemo facere. ",
     },
     {
@@ -37,14 +37,11 @@ const LeftSideBar = () => {
       <div className="line"></div>
       <div>
         <p className="title">WHAT PEOPLE SAY:</p>
-        
+
         <div className="Testimonials-Carousel max-w-min">
-          <Slider
-            className=" "
-            {...TestimonialsSliderSettings}
-          >
-            {TestimonialsData.map((item,index) => (
-              <CarouselItem key={index} item={item} /> 
+          <Slider className=" " {...TestimonialsSliderSettings}>
+            {TestimonialsData.map((item, index) => (
+              <CarouselItem key={index} item={item} />
             ))}
           </Slider>
         </div>
@@ -55,14 +52,33 @@ const LeftSideBar = () => {
 
 export default LeftSideBar;
 
-const CarouselItem = ({item}) => {
-  return <div>
-         <div className="">
-         <i className=" fa-solid fa-quote-left  inline text-red-600"></i>
-         <p className="inline px-2">{item.text}</p>
-         <i className="fa-solid fa-quote-right text-red-600"></i>
-         </div>
-         
-         <p className="font-bold text-center text-lg">{item.user}</p>
-  </div>;
+const CarouselItem = ({ item }) => {
+  return (
+    <div>
+       <div className="  flex items-center gap-2">
+        <img
+          src="src/assets/user1.jpeg"
+          className="size-12 rounded-full"
+          alt=""
+        />
+        <div className=" flex flex-col h-full w-full ">
+          
+          <p className="">{item.user}</p>
+          <p className="text-sm">Coe Founder</p>
+        </div>
+      </div>
+      <div className="">
+        <i className=" fa-solid fa-quote-left  inline text-xl text-red-600"></i>
+        <p className="inline px-2">{item.text}</p>
+        <i className="fa-solid fa-quote-right text-xl text-red-600"></i>
+      </div>
+
+
+     
+
+
+
+
+    </div>
+  );
 };
