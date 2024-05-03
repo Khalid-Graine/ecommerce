@@ -3,8 +3,8 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { HomeSliderSettings } from "../../../assets/js/HomeSliderSettings";
-import "../../../assets/css/HomeCarousel.css";
+
+import "../../../assets/css/TestimonialsCarousel.css";
 import { TestimonialsSliderSettings } from "../../../assets/js/TestimonialsSliderSettings";
 
 const LeftSideBar = () => {

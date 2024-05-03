@@ -10,13 +10,14 @@
   color: green !important;
 }
 .Testimonials-Carousel .slick-prev:before {
-  margin-left: -10px;
+  margin-left: 20px;
+  z-index: -99999999;
 }
 
 .Testimonials-Carousel .slick-dots li button::before { 
   overflow: hidden;
   height: 6px !important;
-  top: -100% !important;
+  top: 0px !important;
   opacity: 100%;
   background-color: white;
 }
