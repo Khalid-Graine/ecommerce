@@ -110,10 +110,8 @@ const BestSelection = () => {
     }
   return (
     <div className='bg-blue-900 sides'>
-        <div>
-            <h3>Our Best Selection</h3>
-            <p>Display products on any page from a variety of sources. Journal 3 offers the most comprehensive product selection tools in Opencart.</p>
-        </div>
+        
+         <TheIntroduction />
         <div className='mt-6 bg-yellow-300 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5'>
             {Selections.map((item,index)=> (
                 <div key={index}>
@@ -135,6 +133,7 @@ const BestSelection = () => {
             ))}
             
         </div>
+
         { showQuikView && <div onClick={() => setShowQuikView(false)} className='fixed z-10 top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex justify-center items-center '>
             <div className='w-[650px]  h-[450px] mx-auto bg-white flex overflow-y-auto '>
               {isLoading && <div className='w-full h-full  flex justify-center items-center '>
@@ -151,15 +150,26 @@ const BestSelection = () => {
                         {/* content */}
                           <div className=' content grid grid-cols-2'>
                             <div className='bg-red-300 border-r'>
-                                e
+                               <div></div>
+                               <div></div>
                             </div>
                             <div className='bg-purple-300'>
                               <TheTitle>title</TheTitle>
-                              <div>
-                                <p>stock :</p>
+                              <div className='flex gap-2'>
+                                <p className=' font-semibold'>stock :</p>
                                 <span>in stock</span>
                               </div>
-                              <p>1900</p>
+                              <div className='flex gap-2'>
+                                <p className=' font-semibold'>Brand :</p>
+                                <span>extrr</span>
+                              </div>
+                              <div className='flex gap-2'>
+                                <p className=' font-semibold'>ex tax: </p>
+                                <span>1200</span>
+                              </div>
+                              
+                              <hr />
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic!</p>
                             </div>
                           </div>
                           {/* bottom bar for purchase */}
@@ -190,6 +200,16 @@ const BestSelection = () => {
         </div>}
     </div>
   )
+}
+
+
+const TheIntroduction = () => {
+    return (
+        <div>
+        <h3>Our Best Selection</h3>
+        <p>Display products on any page from a variety of sources. Journal 3 offers the most comprehensive product selection tools in Opencart.</p>
+    </div>
+    )
 }
 
 export default BestSelection
