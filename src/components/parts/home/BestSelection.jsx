@@ -10,7 +10,19 @@ const BestSelection = () => {
                     name: 'phonwe 12',
                     price: '1999',
                     secondprice: '100',
-                    picture: ''
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
                 }
             ]
         },
@@ -21,10 +33,67 @@ const BestSelection = () => {
                     name: 'phonwe 12',
                     price: '1999',
                     secondprice: '100',
-                    picture: ''
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
                 }
             ]
-        }
+        }, {
+            title: 'best',
+            products: [
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                }
+            ]
+        }, {
+            title: 'best',
+            products: [
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                },
+                {
+                    name: 'phonwe 12',
+                    price: '1999',
+                    secondprice: '100',
+                    picturePath: 'src/assets/iphone.jpg'
+                }
+            ]
+        },
+        
     ]
   return (
     <div className='bg-blue-900 sides'>
@@ -40,11 +109,11 @@ const BestSelection = () => {
                         {item.products.map((product,i) => (
                             <li key={i} className='bg-white flex gap-2'>
                             <div className='size-20 flex border p-1'>
-                            <img src="src/assets/iphone.jpg" alt="" className=' object-cover' />
+                            <img src={product.picturePath} alt="" className=' object-cover' />
                             </div>
                             <div>
                                 <p>{product.name}</p>
-                                <p>199$</p>
+                                <p>{product.price}</p>
                             </div>
                         </li>
                         ))}
