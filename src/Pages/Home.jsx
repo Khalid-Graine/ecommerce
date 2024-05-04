@@ -1,3 +1,4 @@
+import BestSelection from "../components/parts/home/BestSelection";
 import BlogsSection from "../components/parts/home/BlogsSection";
 import CenterArea from "../components/parts/home/CenterArea";
 import FeaturesSection from "../components/parts/home/FeaturesSection";
@@ -21,6 +22,7 @@ const Home = () => {
       </div>
 
       <FeaturesSection />
+      <BestSelection />
       <BlogsSection />
     </>
   );
