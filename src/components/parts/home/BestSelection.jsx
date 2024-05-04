@@ -147,11 +147,16 @@ const BestSelection = () => {
                         <div onClick={() => setShowQuikView(false)} className=' absolute right-2 top-2 size-8 bg-blue-500 flex justify-center items-center rounded-full'>
                         <i className="fa-solid fa-xmark  text-white"></i>
                         </div>
-                          <p>hiiiiiii</p>
-                          <p>{product.name}</p>
-                          <p>{product.price}</p>
-                          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque temporibus earum eligendi reiciendis voluptas fugit ullam ea dignissimos  necessitatibus?</div>
-                          <div className='px-4 bg-white py-1 sticky bottom-0 right-0 border-t  flex'>
+                          <div className='content grid grid-cols-2'>
+                            <div className='bg-red-300 border-r'>
+                                e
+                            </div>
+                            <div className='bg-purple-300'>
+                                n
+                            </div>
+                          </div>
+                          {/* bottom bar for purchase */}
+                          <div className='px-4 bg-white py-1 w-full absolute bottom-0 right-0 border-t  flex'>
                             <div className='flex-grow flex'>
                                 <div className='flex justify-center bg-yellow-300 items-center size-10 '>
                                     0
