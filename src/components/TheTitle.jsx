@@ -1,7 +1,9 @@
 
-const TheTitle = () => {
+const TheTitle = ({text}) => {
   return (
-    <div>TheTitle</div>
+    <div className="mb-2 w-fit border-0 border-b border-red-400 pb-[0.5px] text-lg font-semibold uppercase text-white">
+    {text}
+  </div>
   )
 }
 
