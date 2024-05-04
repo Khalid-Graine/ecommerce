@@ -122,7 +122,7 @@ const BestSelection = () => {
             
         </div>
 
-        { showQuikView && <div onClick={() => setShowQuikView(false)} className='fixed z-10 top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex justify-center items-center '>
+        { showQuikView && <div onClick={() => setShowQuikView(false)} className='quick-view'>
             <div className='w-[650px]  h-[450px] mx-auto bg-white flex overflow-y-auto '>
               {isLoading && <div className='w-full h-full  flex justify-center items-center '>
                 <div className='size-10 p-1 animate-spin text-3xl bg-blue-500 rounded-full'>
@@ -132,34 +132,11 @@ const BestSelection = () => {
                 {!isLoading && 
                      <div className='w-full relative border h-full '>
                         {/* close butoon */}
-                        <div onClick={() => setShowQuikView(false)} className=' absolute right-2 top-2 size-8 bg-blue-500 flex justify-center items-center rounded-full'>
+                        <div onClick={() => setShowQuikView(false)} className='close-quick-view'>
                         <i className="fa-solid fa-xmark  text-white"></i>
                         </div>
                         {/* content */}
-                          <div className=' content grid grid-cols-2'>
-                            <div className='bg-red-300 border-r'>
-                               <div></div>
-                               <div></div>
-                            </div>
-                            <div className='bg-purple-300'>
-                              <TheTitle>title</TheTitle>
-                              <div className='flex gap-2'>
-                                <p className=' font-semibold'>stock :</p>
-                                <span>in stock</span>
-                              </div>
-                              <div className='flex gap-2'>
-                                <p className=' font-semibold'>Brand :</p>
-                                <span>extrr</span>
-                              </div>
-                              <div className='flex gap-2'>
-                                <p className=' font-semibold'>ex tax: </p>
-                                <span>1200</span>
-                              </div>
-                              
-                              <hr />
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic!</p>
-                            </div>
-                          </div>
+                          <CartContent />
                           {/* bottom bar for purchase */}
                           <div className='px-4 bg-white py-1 sticky w-full  bottom-0 right-0 border-t  flex'>
                             <div className='flex-grow flex'>
@@ -179,8 +156,7 @@ const BestSelection = () => {
                             <div className='bg-green-400 flex justify-center items-center size-10'>
                             <i className="fa-solid fa-arrow-right-long"></i>
                             </div>
-                          </div>
-                         
+                          </div>   
                      </div>
                 }
                 
@@ -190,7 +166,34 @@ const BestSelection = () => {
   )
 }
 
-
+const CartContent = () => {
+    return (
+        <div className=' content grid grid-cols-2'>
+        <div className='bg-red-300 border-r'>
+           <div></div>
+           <div></div>
+        </div>
+        <div className='bg-purple-300'>
+          <TheTitle>title</TheTitle>
+          <div className='flex gap-2'>
+            <p className=' font-semibold'>stock :</p>
+            <span>in stock</span>
+          </div>
+          <div className='flex gap-2'>
+            <p className=' font-semibold'>Brand :</p>
+            <span>extrr</span>
+          </div>
+          <div className='flex gap-2'>
+            <p className=' font-semibold'>ex tax: </p>
+            <span>1200</span>
+          </div>
+          
+          <hr />
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, mollitia! Ratione suscipit dolores minus nulla laborum inventore voluptas libero iure nihil similique enim delectus eveniet ipsam, modi atque quos nostrum eius quia? Sint molestiae animi a quod soluta, voluptatum excepturi maiores nihil, dolor in enim, possimus autem laboriosam accusantium hic!</p>
+        </div>
+      </div>
+    )
+}
 const ProductList = ({item,showProduct}) => {
     return (
         <ul className='grid gap-1'>
