@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TheTitle from '../../TheTitle'
 
 const BestSelection = () => {
-    
+    const [product,setProduct] = useState('')
     const [showQuikView,setShowQuikView] = useState(false)
     const [isLoading,setIsLoading] = useState(false)
     const Selections = [
@@ -99,6 +99,7 @@ const BestSelection = () => {
         
     ]
     const showProduct = (product) => {
+        setProduct(product)
         setShowQuikView(true);
         setIsLoading(true);
         
@@ -141,6 +142,7 @@ const BestSelection = () => {
                     .
                 </div>
                 </div>}
+                
             </div>
         </div>}
     </div>
