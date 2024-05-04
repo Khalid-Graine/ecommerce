@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import TheTitle from '../../TheTitle'
 
 const BestSelection = () => {
+    
     const [showQuikView,setShowQuikView] = useState(false)
-    const [isLoading,setIsLoading] = useState(true)
+    const [isLoading,setIsLoading] = useState(false)
     const Selections = [
         {
             title: 'best',
@@ -97,6 +98,15 @@ const BestSelection = () => {
         },
         
     ]
+    const showProduct = (product) => {
+        setShowQuikView(true);
+        setIsLoading(true);
+        
+        setTimeout(() => {
+            setIsLoading(false);
+          }, 1000);
+        
+    }
   return (
     <div className='bg-blue-900 sides'>
         <div>
@@ -109,7 +119,7 @@ const BestSelection = () => {
                      <TheTitle>{item.title} </TheTitle>
                     <ul className='grid gap-1'>
                         {item.products.map((product,i) => (
-                            <li onClick={() => setShowQuikView(true)}  key={i} className='bg-white flex gap-2'>
+                            <li onClick={() => showProduct(product)}  key={i} className='bg-white flex gap-2'>
                             <div className='size-20 flex border p-1'>
                             <img src={product.picturePath} alt="" className=' object-cover' />
                             </div>
