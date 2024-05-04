@@ -144,7 +144,7 @@ const BestSelection = () => {
                 </div>}
                 {!isLoading && 
                      <div className='w-full relative'>
-                        <div  className=' absolute right-0 top-1 size-8 bg-blue-500 flex justify-center items-center rounded-full'>
+                        <div onClick={() => setShowQuikView(false)} className=' absolute right-0 top-1 size-8 bg-blue-500 flex justify-center items-center rounded-full'>
                         <i className="fa-solid fa-xmark  text-white"></i>
                         </div>
                           <p>hiiiiiii</p>
