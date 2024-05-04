@@ -142,6 +142,13 @@ const BestSelection = () => {
                     .
                 </div>
                 </div>}
+                {!isLoading && 
+                     <div>
+                          <p>hiiiiiii</p>
+                          <p>{product.name}</p>
+                          <p>{product.price}</p>
+                     </div>
+                }
                 
             </div>
         </div>}
