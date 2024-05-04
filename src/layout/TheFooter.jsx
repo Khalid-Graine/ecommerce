@@ -6,7 +6,10 @@ const TheFooter = () => {
     <div>
       <div className="sides grid grid-cols-2 gap-x-4 gap-y-6 bg-gray-600 py-4 lg:grid-cols-4">
         <div>
-          <TheTitle text={"CUSTOM LINKS"} />
+         
+          <TheTitle>
+          CUSTOM LINKS
+          </TheTitle>
           <ul className="text-[#eeeeee]">
             <li>
               <a href="http://">test</a>
@@ -23,7 +26,10 @@ const TheFooter = () => {
           </ul>
         </div>
         <div>
-          <TheTitle text={"CUSTOM LINKS"} />
+          
+          <TheTitle>
+          CUSTOM LINKS
+          </TheTitle>
           <ul className="text-[#eeeeee]">
             <li>
               <a href="http://">test</a>
@@ -40,7 +46,9 @@ const TheFooter = () => {
           </ul>
         </div>
         <div>
-          <TheTitle text={"CUSTOM LINKS"} />
+        <TheTitle>
+          CUSTOM LINKS
+          </TheTitle>
           <ul className="text-[#eeeeee]">
             <li>
               <a href="http://">test</a>
