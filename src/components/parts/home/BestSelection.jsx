@@ -116,19 +116,7 @@ const BestSelection = () => {
             {Selections.map((item,index)=> (
                 <div key={index}>
                      <TheTitle>{item.title} </TheTitle>
-                    <ul className='grid gap-1'>
-                        {item.products.map((product,i) => (
-                            <li onClick={() => showProduct(product)}  key={i} className='bg-white flex gap-2'>
-                            <div className='size-20 flex border p-1'>
-                            <img src={product.picturePath} alt="" className=' object-cover' />
-                            </div>
-                            <div>
-                                <p>{product.name}</p>
-                                <p>{product.price}</p>
-                            </div>
-                        </li>
-                        ))}
-                    </ul>
+                      <ProductList item={item} showProduct={showProduct} />
                 </div>
             ))}
             
@@ -202,6 +190,24 @@ const BestSelection = () => {
   )
 }
 
+
+const ProductList = ({item,showProduct}) => {
+    return (
+        <ul className='grid gap-1'>
+        {item.products.map((product,i) => (
+            <li onClick={() => showProduct(product)}  key={i} className='bg-white flex gap-2'>
+            <div className='size-20 flex border p-1'>
+            <img src={product.picturePath} alt="" className=' object-cover' />
+            </div>
+            <div>
+                <p>{product.name}</p>
+                <p>{product.price}</p>
+            </div>
+        </li>
+        ))}
+    </ul>
+    )
+}
 
 const TheIntroduction = () => {
     return (
