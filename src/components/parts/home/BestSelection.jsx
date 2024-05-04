@@ -126,7 +126,11 @@ const BestSelection = () => {
         </div>
         { showQuikView && <div onClick={() => setShowQuikView(false)} className='fixed z-10 top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex justify-center items-center '>
             <div className='w-[650px]  h-[450px] mx-auto bg-yellow-200 flex overflow-y-auto p-2'>
-              
+              {isLoading && <div className='w-full h-full  flex justify-center items-center '>
+                <div className='size-10 p-1 animate-spin text-3xl bg-blue-500 rounded-full'>
+                    .
+                </div>
+                </div>}
             </div>
         </div>}
     </div>
