@@ -136,27 +136,34 @@ const BestSelection = () => {
             
         </div>
         { showQuikView && <div onClick={() => setShowQuikView(false)} className='fixed z-10 top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex justify-center items-center '>
-            <div className='w-[650px]  h-[450px] mx-auto bg-yellow-200 flex overflow-y-auto '>
+            <div className='w-[650px]  h-[450px] mx-auto bg-white flex overflow-y-auto '>
               {isLoading && <div className='w-full h-full  flex justify-center items-center '>
                 <div className='size-10 p-1 animate-spin text-3xl bg-blue-500 rounded-full'>
                     .
                 </div>
                 </div>}
                 {!isLoading && 
-                     <div className='w-full relative'>
+                     <div className='w-full relative border h-full '>
+                        {/* close butoon */}
                         <div onClick={() => setShowQuikView(false)} className=' absolute right-2 top-2 size-8 bg-blue-500 flex justify-center items-center rounded-full'>
                         <i className="fa-solid fa-xmark  text-white"></i>
                         </div>
-                          <div className='content grid grid-cols-2'>
+                        {/* content */}
+                          <div className=' content grid grid-cols-2'>
                             <div className='bg-red-300 border-r'>
                                 e
                             </div>
                             <div className='bg-purple-300'>
-                               
+                              <TheTitle>title</TheTitle>
+                              <div>
+                                <p>stock :</p>
+                                <span>in stock</span>
+                              </div>
+                              <p>1900</p>
                             </div>
                           </div>
                           {/* bottom bar for purchase */}
-                          <div className='px-4 bg-white py-1 w-full sticky bottom-0 right-0 border-t  flex'>
+                          <div className='px-4 bg-white py-1 sticky w-full  bottom-0 right-0 border-t  flex'>
                             <div className='flex-grow flex'>
                                 <div className='flex justify-center bg-yellow-300 items-center size-10 '>
                                     0
@@ -175,6 +182,7 @@ const BestSelection = () => {
                             <i className="fa-solid fa-arrow-right-long"></i>
                             </div>
                           </div>
+                         
                      </div>
                 }
                 
