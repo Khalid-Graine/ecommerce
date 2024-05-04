@@ -158,6 +158,9 @@ const BestSelection = () => {
                             <div className='bg-red-500 flex justify-center items-center size-10'>
                             <i className="fa-regular fa-heart"></i>
                             </div>
+                            <div className='bg-green-400 flex justify-center items-center size-10'>
+                            <i className="fa-solid fa-arrow-right-long"></i>
+                            </div>
                           </div>
                      </div>
                 }
