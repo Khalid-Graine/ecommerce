@@ -167,7 +167,11 @@ const BestSelection = () => {
     </div>
   );
 };
-
+const ProductActionsBar = () => {
+    return (
+        
+    )
+}
 const CartContent = () => {
   return (
     <div className=" content grid grid-cols-2">
