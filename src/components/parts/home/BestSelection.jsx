@@ -132,17 +132,33 @@ const BestSelection = () => {
             )}
             {!isLoading && (
               <div className="relative h-full w-full border ">
-                {/* close butoon */}
-                <div
-                  onClick={() => setShowQuikView(false)}
-                  className="close-quick-view"
-                >
-                  <i className="fa-solid fa-xmark  text-white"></i>
-                </div>
-                {/* content */}
+               
+               <CloseButton setShowQuikView={setShowQuikView} />
+                
                 <CartContent />
-                {/* bottom bar for purchase */}
-                <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
+                
+                <ProductActionsBar />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+const CloseButton = ({setShowQuikView}) => {
+    return (
+        <div
+        onClick={() => setShowQuikView(false)}
+        className="close-quick-view"
+      >
+        <i className="fa-solid fa-xmark  text-white"></i>
+      </div>
+    )
+}
+const ProductActionsBar = () => {
+    return (
+        <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
                   <div className="flex flex-grow">
                     <div className="flex size-10 items-center justify-center bg-yellow-300 ">
                       0
@@ -159,17 +175,6 @@ const BestSelection = () => {
                     <i className="fa-solid fa-arrow-right-long"></i>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-const ProductActionsBar = () => {
-    return (
-        
     )
 }
 const CartContent = () => {
