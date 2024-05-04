@@ -3,6 +3,7 @@ import TheTitle from '../../TheTitle'
 
 const BestSelection = () => {
     const [showQuikView,setShowQuikView] = useState(false)
+    const [isLoading,setIsLoading] = useState(true)
     const Selections = [
         {
             title: 'best',
@@ -108,7 +109,7 @@ const BestSelection = () => {
                      <TheTitle>{item.title} </TheTitle>
                     <ul className='grid gap-1'>
                         {item.products.map((product,i) => (
-                            <li  key={i} className='bg-white flex gap-2'>
+                            <li onClick={() => setShowQuikView(true)}  key={i} className='bg-white flex gap-2'>
                             <div className='size-20 flex border p-1'>
                             <img src={product.picturePath} alt="" className=' object-cover' />
                             </div>
@@ -123,11 +124,11 @@ const BestSelection = () => {
             ))}
             
         </div>
-        <div className='fixed z-10 top-0 right-0 w-full h-screen bg-white flex justify-center items-center'>
+        { showQuikView && <div onClick={() => setShowQuikView(false)} className='fixed z-10 top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex justify-center items-center '>
             <div className='w-[650px]  h-[450px] mx-auto bg-yellow-200 flex overflow-y-auto p-2'>
               
             </div>
-        </div>
+        </div>}
     </div>
   )
 }
