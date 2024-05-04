@@ -143,7 +143,10 @@ const BestSelection = () => {
                 </div>
                 </div>}
                 {!isLoading && 
-                     <div>
+                     <div className='w-full relative'>
+                        <div className=' absolute right-2 top-2'>
+                        <i className="fa-solid fa-xmark"></i>
+                        </div>
                           <p>hiiiiiii</p>
                           <p>{product.name}</p>
                           <p>{product.price}</p>
