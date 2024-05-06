@@ -132,11 +132,8 @@ const BestSelection = () => {
             )}
             {!isLoading && (
               <div className="relative h-full w-full border ">
-               
-               <CloseButton setShowQuikView={setShowQuikView} />
-                
+                <CloseButton setShowQuikView={setShowQuikView} />
                 <CartContent />
-                
                 <ProductActionsBar />
               </div>
             )}
@@ -146,42 +143,41 @@ const BestSelection = () => {
     </div>
   );
 };
-const CloseButton = ({setShowQuikView}) => {
-    return (
-        <div
-        onClick={() => setShowQuikView(false)}
-        className="close-quick-view"
-      >
-        <i className="fa-solid fa-xmark  text-white"></i>
-      </div>
-    )
-}
+const CloseButton = ({ setShowQuikView }) => {
+  return (
+    <div onClick={() => setShowQuikView(false)} className="close-quick-view">
+      <i className="fa-solid fa-xmark  text-white"></i>
+    </div>
+  );
+};
 const ProductActionsBar = () => {
-    return (
-        <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
-                  <div className="flex flex-grow">
-                    <div className="flex size-10 items-center justify-center bg-yellow-300 ">
-                      0
-                    </div>
-                    <div></div>
-                    <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
-                      add to cart
-                    </div>
-                  </div>
-                  <div className="flex size-10 items-center justify-center bg-red-500">
-                    <i className="fa-regular fa-heart"></i>
-                  </div>
-                  <div className="flex size-10 items-center justify-center bg-green-400">
-                    <i className="fa-solid fa-arrow-right-long"></i>
-                  </div>
-                </div>
-    )
-}
+  return (
+    <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
+      <div className="flex flex-grow">
+        <div className="flex size-10 items-center justify-center bg-yellow-300 ">
+          0
+        </div>
+        <div></div>
+        <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
+          add to cart
+        </div>
+      </div>
+      <div className="flex size-10 items-center justify-center bg-red-500">
+        <i className="fa-regular fa-heart"></i>
+      </div>
+      <div className="flex size-10 items-center justify-center bg-green-400">
+        <i className="fa-solid fa-arrow-right-long"></i>
+      </div>
+    </div>
+  );
+};
 const CartContent = () => {
   return (
-    <div className=" content grid grid-cols-2">
+    <div className=" content grid grid-cols-2 gap-2 p-1">
       <div className="border-r bg-red-300">
-        <div></div>
+        <div className="w-full ">
+          <img src="src/assets/iphone2.webp" alt="" />
+        </div>
         <div></div>
       </div>
       <div className="bg-purple-300">
