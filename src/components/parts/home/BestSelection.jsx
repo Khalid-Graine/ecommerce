@@ -159,6 +159,7 @@ const ProductActionsBar = () => {
         </div>
         <div className="">
           <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
           add to cart
