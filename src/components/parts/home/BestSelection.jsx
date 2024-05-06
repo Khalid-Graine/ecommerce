@@ -166,10 +166,10 @@ const ProductActionsBar = () => {
           add to cart
         </div>
       </div>
-      <div className="flex size-10 items-center justify-center bg-red-500">
+      <div className="flex w-10 items-center justify-center bg-red-500">
         <i className="fa-regular fa-heart"></i>
       </div>
-      <div className="flex size-10 items-center justify-center bg-green-400">
+      <div className="flex w-10 items-center justify-center bg-green-400">
         <i className="fa-solid fa-arrow-right-long"></i>
       </div>
     </div>
