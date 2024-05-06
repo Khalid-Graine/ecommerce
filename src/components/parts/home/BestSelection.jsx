@@ -157,7 +157,9 @@ const ProductActionsBar = () => {
         <div className="flex size-10 items-center justify-center bg-yellow-300 ">
           0
         </div>
-        <div></div>
+        <div className="">
+          <i className="fa-solid fa-chevron-up"></i>
+        </div>
         <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
           add to cart
         </div>
