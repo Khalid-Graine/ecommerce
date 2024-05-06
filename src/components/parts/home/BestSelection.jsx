@@ -154,12 +154,13 @@ const ProductActionsBar = () => {
   return (
     <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
       <div className="flex flex-grow">
-        <div className="flex size-10 items-center justify-center bg-yellow-300 ">
+        <div className="flex w-10 items-center justify-center border ">
           0
         </div>
-        <div className="">
-          <i className="fa-solid fa-chevron-up"></i>
-          <i className="fa-solid fa-chevron-down"></i>
+        <div className="flex flex-col items-center justify-center text-xl border hover:cursor-pointer bg-gray-700 ">
+          <i className="fa-solid fa-chevron-up  text-white"></i>
+          <hr className="border w-full" />
+          <i className="fa-solid fa-chevron-down text-white"></i>
         </div>
         <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
           add to cart
