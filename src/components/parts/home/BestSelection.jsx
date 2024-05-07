@@ -131,7 +131,7 @@ const BestSelection = () => {
               </div>
             )}
             {!isLoading && (
-              <div className="relative h-full w-full border ">
+              <div className="relative h-full w-full  ">
                 <CloseButton setShowQuikView={setShowQuikView} />
                 <CartContent />
                 <ProductActionsBar />
@@ -178,17 +178,17 @@ const ProductActionsBar = () => {
 const CartContent = () => {
   return (
     <div className=" content grid grid-cols-2 gap-2 p-1">
-      <div className="border-r bg-red-300">
-        <div className="w-full ">
+      <div className="border-r pr-1">
+        <div className="size-auto overflow-hidden">
           <img src="src/assets/iphone2.webp" alt="" />
         </div>
         <div></div>
       </div>
-      <div className="bg-purple-300">
-        <TheTitle>title</TheTitle>
+      <div >
+        <TheTitle >title</TheTitle>
         <div className="flex gap-2">
           <p className=" font-semibold">stock :</p>
-          <span>in stock</span>
+          <span className="text-green-500">in stock</span>
         </div>
         <div className="flex gap-2">
           <p className=" font-semibold">Brand :</p>
@@ -196,7 +196,7 @@ const CartContent = () => {
         </div>
         <div className="flex gap-2">
           <p className=" font-semibold">ex tax: </p>
-          <span>1200</span>
+          <span className="text-red-500 font-semibold">1200</span>
         </div>
 
         <hr className="my-2" />
@@ -231,7 +231,7 @@ const ProductList = ({ item, showProduct }) => {
           </div>
           <div>
             <p>{product.name}</p>
-            <p>{product.price}</p>
+            <p >{product.price}</p>
           </div>
         </li>
       ))}
