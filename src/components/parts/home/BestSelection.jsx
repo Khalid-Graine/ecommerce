@@ -121,7 +121,7 @@ const BestSelection = () => {
       </div>
 
       {showQuikView && (
-        <div onClick={() => setShowQuikView(false)} className="quick-view">
+        <div className="quick-view">
           <div className="mx-auto  flex h-[450px] w-[650px] overflow-y-auto bg-white ">
             {isLoading && (
               <div className="flex h-full  w-full items-center justify-center ">
@@ -199,7 +199,7 @@ const CartContent = () => {
           <span>1200</span>
         </div>
 
-        <hr />
+        <hr className="my-2" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
           mollitia! Ratione suscipit dolores minus nulla laborum inventore
