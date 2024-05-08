@@ -179,10 +179,18 @@ const CartContent = () => {
   return (
     <div className=" content grid grid-cols-2 gap-2 p-1">
       <div className="border-r pr-1">
-        <div className="size-auto overflow-hidden">
-          <img src="src/assets/iphone2.webp" alt="" />
+        <div className="max-w-[300px]  aspect-square overflow-hidden flex justify-center items-center border relative">
+        <img src="src/assets/iphone2.webp" alt="" />
+        <div className="bg-yellow-300 absolute top-1 right-1">
+          Hot
         </div>
-        <div></div>
+        </div>
+        <div className="my-2 *:border *:size-10 flex justify-between items-center w-full bg-red-100">
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+        </div>
       </div>
       <div >
         <TheTitle >title</TheTitle>
