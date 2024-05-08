@@ -65,7 +65,7 @@ const RightSideBar = () => {
       <div className="line"></div>
       <div>
         <h4 className="title">GALLERY MODULE</h4>
-        <ul className="grid grid-cols-3 ">
+        <ul className="grid grid-cols-3 *:w-[60px] *:bg-red-500 *:h-[60px] gap-2 *:flex *:justify-center *:items-center">
           <li>test</li>
           <li>test</li>
           <li>test</li>
