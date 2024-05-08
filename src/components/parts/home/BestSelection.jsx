@@ -181,8 +181,10 @@ const CartContent = () => {
       <div className="border-r pr-1">
         <div className="max-w-[300px]  aspect-square overflow-hidden flex justify-center items-center border relative">
         <img src="src/assets/iphone2.webp" alt="" />
-        <div className="bg-yellow-300 absolute top-1 right-1">
-          Hot
+        <div className="bg-yellow-300 absolute top-1 right-1 flex justify-center items-center gap-1 px-2">
+        <i className="fa-solid fa-fire text-red-600"></i>
+        <p> Hot</p>
+         
         </div>
         </div>
         <div className="my-2 *:border *:size-10 flex justify-between items-center w-full bg-red-100">
