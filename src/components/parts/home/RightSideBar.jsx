@@ -1,6 +1,22 @@
 import React from "react";
 
 const RightSideBar = () => {
+  const TopCategories = [{
+    name : 'phones',
+    icon: 'fa-solid fa-desktop',
+    link: '#'
+  },
+  {
+    name : 'phones',
+    icon: 'fa-solid fa-desktop',
+    link: '#'
+  }
+,
+{
+  name : 'phones',
+  icon: 'fa-solid fa-desktop',
+  link: '#'
+}]
   return (
     <div className="hidden lm:flex min-w-[230px] flex-col  px-4 py-2 ">
       <div>
