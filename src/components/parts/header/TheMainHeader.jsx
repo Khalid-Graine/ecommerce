@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import { Menu, ShoppingCartIcon } from "../../../assets/icons/MyIcons";
 import BlackLayer from "../../ui/BlackLayer";
 import NavLink from "../../ui/NavLink";
+import { Link } from "react-router-dom";
 
 const TheMainHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -103,9 +104,11 @@ const TheMainHeader = () => {
 
 const Logo = () => {
   return (
-    <div className="flex h-full items-center bg-blue-600 px-4 font-bold text-white">
-      Journal
-    </div>
+    <Link to={"/"} className="flex h-full items-center bg-blue-600 px-4 font-bold text-white">
+      
+        Journal
+      
+    </Link>
   );
 };
 
