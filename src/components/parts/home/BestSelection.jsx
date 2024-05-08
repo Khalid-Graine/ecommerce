@@ -195,7 +195,7 @@ const CartContent = () => {
         </div>
       </div>
       <div >
-        <TheTitle >title</TheTitle>
+        <h3 className=" text-2xl font-bold border-b border-red-600 w-fit mb-4">iphone 13</h3>
         <div className="flex gap-2">
           <p className=" font-semibold">stock :</p>
           <span className="text-green-500">in stock</span>
