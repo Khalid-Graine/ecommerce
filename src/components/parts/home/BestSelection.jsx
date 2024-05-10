@@ -154,12 +154,10 @@ const ProductActionsBar = () => {
   return (
     <div className="sticky bottom-0 right-0 flex w-full  border-t bg-white px-4  py-1">
       <div className="flex flex-grow">
-        <div className="flex w-10 items-center justify-center border ">
-          0
-        </div>
-        <div className="flex flex-col items-center justify-center text-xl border hover:cursor-pointer bg-gray-700 ">
+        <div className="flex w-10 items-center justify-center border ">0</div>
+        <div className="flex flex-col items-center justify-center border bg-gray-700 text-xl hover:cursor-pointer ">
           <i className="fa-solid fa-chevron-up  text-white"></i>
-          <hr className="border w-full" />
+          <hr className="w-full border" />
           <i className="fa-solid fa-chevron-down text-white"></i>
         </div>
         <div className="flex h-full flex-grow items-center justify-center bg-gray-900 text-white">
@@ -179,23 +177,27 @@ const CartContent = () => {
   return (
     <div className=" content grid grid-cols-2 gap-2 p-1">
       <div className="border-r pr-1">
-        <div className="max-w-[300px]  aspect-square overflow-hidden flex justify-center items-center border relative">
-        <img src="src/assets/iphone2.webp" alt="" />
-        <div className="bg-yellow-300 absolute top-1 right-1 flex justify-center items-center gap-1 px-2">
-        <i className="fa-solid fa-fire text-red-600"></i>
-        <p> Hot</p>
-         
+        <div className="relative  flex aspect-square max-w-[300px] items-center justify-center overflow-hidden border">
+          <img src="src/assets/iphone2.webp" alt="" />
+          <div className=" absolute right-1 top-1 ">
+            <div className="flex items-center justify-center gap-1 bg-yellow-300">
+              <p>hot</p>
+              <i className="fa-solid fa-fire text-red-600"></i>
+            </div>
+            <div>test 2</div>
+          </div>
         </div>
-        </div>
-        <div className="my-2 *:border *:size-10 flex justify-between items-center w-full bg-red-100">
+        <div className="my-2 flex w-full items-center justify-between bg-red-100 *:size-10 *:border">
           <div>.</div>
           <div>.</div>
           <div>.</div>
           <div>.</div>
         </div>
       </div>
-      <div >
-        <h3 className=" text-2xl font-bold border-b border-red-600 w-fit mb-4">iphone 13</h3>
+      <div>
+        <h3 className=" mb-4 w-fit border-b border-red-600 text-2xl font-bold">
+          iphone 13
+        </h3>
         <div className="flex gap-2">
           <p className=" font-semibold">stock :</p>
           <span className="text-green-500">in stock</span>
@@ -206,7 +208,7 @@ const CartContent = () => {
         </div>
         <div className="flex gap-2">
           <p className=" font-semibold">ex tax: </p>
-          <span className="text-red-500 font-semibold">1200</span>
+          <span className="font-semibold text-red-500">1200</span>
         </div>
 
         <hr className="my-2" />
@@ -241,7 +243,7 @@ const ProductList = ({ item, showProduct }) => {
           </div>
           <div>
             <p>{product.name}</p>
-            <p >{product.price}</p>
+            <p>{product.price}</p>
           </div>
         </li>
       ))}
