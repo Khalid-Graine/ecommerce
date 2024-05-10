@@ -180,17 +180,18 @@ const CartContent = () => {
         <div className="relative  flex aspect-square max-w-[300px] items-center justify-center overflow-hidden border">
           <img src="src/assets/iphone2.webp" alt="" />
           <div className=" absolute right-1 top-1 flex flex-col gap-1">
-            <div className=" w-[65px] flex items-center justify-center gap-1 bg-yellow-300">
-            <i className="fa-solid fa-fire text-red-600"></i>
+            <div className=" flag bg-yellow-300">
+              <i className="fa-solid fa-fire text-red-600"></i>
               <p>hot</p>
-              
             </div>
-            <div className="flex items-center justify-center gap-1 bg-blue-300 text-white">
-  
+            <div className="flag bg-blue-300 text-white">
               <i className="fa-solid fa-fire text-red-600"></i>
               <p>New</p>
             </div>
-            
+            <div className=" flag bg-blue-300 text-white">
+              <i className="fa-solid fa-fire text-red-600"></i>
+              <p>-80%</p>
+            </div>
           </div>
         </div>
         <div className="my-2 flex w-full items-center justify-between bg-red-100 *:size-10 *:border">
