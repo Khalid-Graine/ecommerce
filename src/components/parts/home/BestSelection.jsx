@@ -122,7 +122,7 @@ const BestSelection = () => {
 
       {showQuikView && (
         <div className="quick-view">
-          <div className="mx-auto  flex h-[450px] w-[650px] overflow-y-auto bg-white ">
+          <div className="mx-auto  flex h-[450px] w-[730px] overflow-y-auto bg-white ">
             {isLoading && (
               <div className="flex h-full  w-full items-center justify-center ">
                 <div className="size-10 animate-spin rounded-full bg-blue-500 p-1 text-3xl">
@@ -131,7 +131,7 @@ const BestSelection = () => {
               </div>
             )}
             {!isLoading && (
-              <div className="relative h-full w-full  ">
+              <div className=" relative h-full w-full  ">
                 <CloseButton setShowQuikView={setShowQuikView} />
                 <CartContent />
                 <ProductActionsBar />
@@ -145,7 +145,7 @@ const BestSelection = () => {
 };
 const CloseButton = ({ setShowQuikView }) => {
   return (
-    <div onClick={() => setShowQuikView(false)} className="close-quick-view">
+    <div onClick={() => setShowQuikView(false)} className="absolute right-2 top-2 size-8 bg-blue-500 flex justify-center items-center rounded-full">
       <i className="fa-solid fa-xmark  text-white"></i>
     </div>
   );
